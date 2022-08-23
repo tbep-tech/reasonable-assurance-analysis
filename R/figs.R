@@ -4,6 +4,7 @@ library(here)
 library(tibble)
 library(ggmap)
 library(ggspatial)
+library(stringr)
 
 # current land use figure ---------------------------------------------------------------------
 
@@ -119,5 +120,98 @@ p <- ggmap(bsmap1_transparent) +
                          width = grid::unit(0.75, "cm"))
 
 png(here('figs/lulcmap.png'), height = 5, width = 8, res = 300, units = 'in')
+p
+dev.off()
+
+# wbid attainments ----------------------------------------------------------------------------
+
+flimpaired <- st_read('T:/05_GIS/FDEP/Nutrients_305b_2021.shp') %>% 
+  st_transform(crs = 4326)
+
+attaincats <- list( 
+  `2` = 'Attains some designated uses',
+  `3a` = 'No data and information are available to determine if any designated use is attained',
+  `3b` = 'Some data and information are available, but they are insufficient for determining if any designated use is attained',
+  `3c` = 'Meets Planning List criteria and is potentially impaired for one or more designated uses',
+  `4a` = 'Impaired for one or more designated uses and a TMDL has been completed',
+  `4b` = 'Impaired for one or more designated uses, but no TMDL is required because an existing or proposed pollutant control mechanism provides reasonable assurance that the water will attain standards in the future',
+  `4c` = 'Impaired for one or more designated uses but no TMDL is required because the impairment is not caused by a pollutant',
+  `4d` = 'No causative pollutant has been identified',
+  `4e` = 'Impaired, but recently completed or ongoing restoration activities should restore the designated uses of the waterbody',
+  `5` = 'Water quality standards are not attained and a TMDL is required'
+) %>% 
+  enframe(name = 'category', value = 'description') %>%
+  unnest('description') %>% 
+  mutate(
+    col = case_when(
+      category == '2' ~ '#37A601',
+      category == '3a' ~ '#CCCCCC',
+      category == '3b' ~ '#828282',
+      category == '3c' ~ '#FFFF01',
+      category == '4a' ~ '#FF7E7E',
+      category == '4b' ~ '#FFAA01',
+      category == '4c' ~ '#FFCC99',
+      category == '4d' ~ '#FFECB1', 
+      category == '4e' ~ '#CCAB65',
+      category == '5' ~ '#E80002'
+    )
+  ) %>% 
+  unite('fulldescrip', category, description, sep = ': ', remove = F)  %>% 
+  mutate(
+    fulldescrip = str_wrap(fulldescrip, width = 80)
+  )
+
+tbimpaired <- flimpaired %>% 
+  st_make_valid() %>% 
+  st_intersection(tbshed) %>% 
+  rename(category = Summary_As) %>% 
+  select(WBID, category) %>% 
+  inner_join(attaincats, by = 'category')
+
+# colors 
+cols <- attaincats %>% 
+  select(fulldescrip, col) %>% 
+  unique %>% 
+  deframe() 
+
+# layer extent as bbox plus buffer
+dat_ext <- tbimpaired %>% 
+  st_bbox %>% 
+  st_as_sfc %>% 
+  st_buffer(dist = 0.05) %>%
+  st_bbox %>% 
+  unname
+
+# stamen base map
+bsmap1 <- get_stamenmap(bbox = dat_ext, maptype = 'toner-background', zoom = 12)
+
+# change opacity of basemap
+mapatt <- attributes(bsmap1)
+bsmap1_transparent <- matrix(adjustcolor(bsmap1, 
+                                         alpha.f = 0.2), 
+                             nrow = nrow(bsmap1))
+attributes(bsmap1_transparent) <- mapatt
+
+# plot
+p <- ggmap(bsmap1_transparent) +
+  geom_sf(data = tbimpaired, aes(fill = fulldescrip), color = 'black', inherit.aes = F, alpha = 0.8) +
+  scale_fill_manual(values = cols, drop = F) +
+  theme(
+    legend.title = element_blank(), 
+    panel.grid = element_blank(), 
+    axis.title = element_blank(), 
+    legend.position  = 'right', 
+    legend.justification = 'top',
+    axis.text.y = element_text(size = 7), 
+    axis.text.x = element_text(size = 7, angle = 30, hjust = 1),
+    panel.background = element_rect(fill = 'white'),
+    axis.ticks = element_line(colour = 'grey'),
+    panel.border = element_rect(colour = 'grey', fill = NA)
+  ) + 
+  annotation_scale(location = 'tr') +
+  annotation_north_arrow(location = 'bl', which_north = "true", height = grid::unit(0.75, "cm"), 
+                         width = grid::unit(0.75, "cm"))
+
+png(here('figs/wbidattainment.png'), height = 6, width = 9, res = 300, units = 'in')
 p
 dev.off()
