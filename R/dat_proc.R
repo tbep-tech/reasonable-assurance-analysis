@@ -3,6 +3,7 @@ library(foreign)
 library(dplyr)
 library(sf)
 library(lubridate)
+library(tbeptools)
 
 # copy 2020 lulc data -------------------------------------------------------------------------
 
@@ -22,15 +23,16 @@ fluccslkup <- read.dbf('T:/05_GIS/TBEP/LULC_PROCESSED/SWFWMD_2020_LULC_SEAGRASS_
 
 save(fluccslkup, file = here('data/fluccslkup.RData'))
 
-# Pinellas Co chl data ------------------------------------------------------------------------
+
+# BCBS, TCB, and MR chlorophyll data ----------------------------------------------------------
 
 # from pinellas county water atlas, selected all stations that looked relevant for BCBS
 
-bcbsseg <- st_read('~/Desktop/tampabay_ra_seg_watersheds/tampabay_ra_seg_watersheds.shp') %>% 
+bcbsseg <- st_read(here('data-raw/tampabay_ra_seg_watersheds.shp')) %>% 
   st_transform(crs = 4326) %>% 
   filter(BAY_SEGMEN == 5)
 
-pinchlraw <- read.csv('~/Desktop/pinchl.txt', sep = '\t', header = T)
+pinchlraw <- read.csv(here('data-raw/pinchl.txt'), sep = '\t', header = T)
 
 pinchl <- pinchlraw %>% 
   filter(Parameter == 'Chla_ugl') %>% 
@@ -54,10 +56,12 @@ pinchl <- pinchlraw %>%
   .[bcbsseg, ] %>% 
   st_set_geometry(NULL)
 
+# add MR and TCB data
+
 chldat <- epcdata %>% 
   rename(station = epchc_station) %>% 
   mutate(station = as.character(station)) %>% 
   select(matches(names(pinchl))) %>% 
   bind_rows(pinchl)
 
-# save then try to rathr_plot, but need to change targets input to add values for bcb-s
+save(chldat, file = here('data/chldat.RData'))
