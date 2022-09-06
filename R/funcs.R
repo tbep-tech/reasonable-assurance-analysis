@@ -30,7 +30,7 @@ show_rathrplot <- function(datin, bay_segment = c('OTB', 'HB', 'MTB', 'LTB', 'BC
   
   # averages
   aves <- raanlz_avedat(datin, partialyr = partialyr)
-  
+
   # axis label
   if(labelexp)
     axlab <- dplyr::case_when(
@@ -138,7 +138,7 @@ show_rathrplot <- function(datin, bay_segment = c('OTB', 'HB', 'MTB', 'LTB', 'BC
   
   if(txtlab & thrs)
     p <- p +
-    geom_text(aes(yrrng[1], max(toplo$yval), label = trglab), parse = labelexp, hjust = 0.2, vjust = 1, family = family, colour = 'blue')
+    geom_text(aes(yrrng[1], max(yval), label = trglab), parse = labelexp, hjust = 0.2, vjust = 1, family = family, colour = 'blue')
   
   
   if(partialyr)
@@ -167,8 +167,7 @@ raanlz_avedat <- function(datin, partialyr = FALSE){
       )
     ) %>%
     dplyr::group_by(bay_segment, yr, mo, var) %>%
-    dplyr::summarise(val = mean(val)) %>%
-    dplyr::ungroup() %>%
+    dplyr::summarise(val = mean(val), .groups = 'drop') %>%
     drop_na() %>%
     dplyr::mutate(
       val = dplyr::case_when(
@@ -184,9 +183,9 @@ raanlz_avedat <- function(datin, partialyr = FALSE){
     ) %>%
     dplyr::group_by(bay_segment, yr, mo, var) %>%
     dplyr::summarise(
-      val = sum(val)
+      val = sum(val), 
+      .groups = 'drop'
     ) %>%
-    dplyr::ungroup() %>%
     dplyr::mutate(
       val = dplyr::case_when(
         bay_segment %in% 'MTB' ~ val / 4125.2,
@@ -215,7 +214,10 @@ raanlz_avedat <- function(datin, partialyr = FALSE){
     moave <- moout %>%
       dplyr::filter(yr >= yrfl[1] & yr <= yrfl[2]) %>%
       dplyr::group_by(bay_segment, mo, var) %>%
-      summarise(val = mean(val, na.rm = TRUE)) %>%
+      summarise(
+        val = mean(val, na.rm = TRUE), 
+        .groups = 'drop'
+        ) %>%
       dplyr::filter(mo %in% mofl) %>%
       dplyr::mutate(yr = maxyr)
     
@@ -229,8 +231,10 @@ raanlz_avedat <- function(datin, partialyr = FALSE){
   # annual data
   anout <- moout %>%
     dplyr::group_by(yr, bay_segment, var) %>%
-    dplyr::summarise(val = mean(val)) %>%
-    dplyr::ungroup() %>%
+    dplyr::summarise(
+      val = mean(val), 
+      .groups = 'drop'
+      ) %>%
     dplyr::mutate(
       var = dplyr::case_when(
         var == 'chla' ~ 'mean_chla',

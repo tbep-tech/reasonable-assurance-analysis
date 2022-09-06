@@ -7,7 +7,7 @@ library(ggspatial)
 library(stringr)
 library(grid)
 library(USAboundaries)
-library(gridExtra)
+library(patchwork)
 library(tbeptools)
 
 source(here('R/funcs.R'))
@@ -261,49 +261,22 @@ dev.off()
 
 load(file = here('data/chldat.RData'))
 
-# additional targets for remainder here https://drive.google.com/file/d/1sH9Jx1PQTVrvTaJ_FxDtf3IC-hIVzdpV/view
-trgs <- targets %>% 
-  bind_rows(
-    tibble(
-      bay_segment = c('BCBS', 'TCB', 'MR'), 
-      name = c('Boca Ciega Bay South', 'Terra Ceia Bay', 'Manatee River'),
-      chla_thresh = c(6.3, 8.7, 8.8)
-    )
-  )
-
 maxyr <- 2021
 yrrng <- c(1975, maxyr)
 
-p1 <- show_rathrplot(chldat, bay_segment = "OTB", thr = "chla", yrrng = yrrng, trgs = trgs, thrs = T)
-p1leg <- g_legend(p1)
-p1 <- p1 + theme(legend.position = 'none')
-p2 <- show_rathrplot(chldat, bay_segment = "HB", thr = "chla", yrrng = yrrng, trgs = trgs, thrs = T) + theme(legend.position = 'none')
-p3 <- show_rathrplot(chldat, bay_segment = "MTB", thr = "chla", yrrng = yrrng, trgs = trgs, thrs = T) + theme(legend.position = 'none')
-p4 <- show_rathrplot(chldat, bay_segment = "LTB", thr = "chla", yrrng = yrrng, trgs = trgs, thrs = T) + theme(legend.position = 'none')
-p5 <- show_rathrplot(chldat, bay_segment = "BCBS", thr = "chla", yrrng = yrrng, trgs = trgs, thrs = T) + theme(legend.position = 'none')
+p1 <- show_rathrplot(chldat, bay_segment = "OTB", thr = "chla", yrrng = yrrng, thrs = T)
+p2 <- show_rathrplot(chldat, bay_segment = "HB", thr = "chla", yrrng = yrrng, thrs = T)
+p3 <- show_rathrplot(chldat, bay_segment = "MTB", thr = "chla", yrrng = yrrng, thrs = T)
+p4 <- show_rathrplot(chldat, bay_segment = "LTB", thr = "chla", yrrng = yrrng, thrs = T) 
+p5 <- show_rathrplot(chldat, bay_segment = "BCBS", thr = "chla", yrrng = yrrng, thrs = T)
+p6 <- show_rathrplot(chldat, bay_segment = "TCB", thr = "chla", yrrng = yrrng, thrs = T)
+p7 <- show_rathrplot(chldat, bay_segment = "MR", thr = "chla", yrrng = yrrng, thrs = T) 
 
-# align
-# Get the widths
-pA <- ggplot_gtable(ggplot_build(p1))
-pB <- ggplot_gtable(ggplot_build(p2))
-pC <- ggplot_gtable(ggplot_build(p3))
-pD <- ggplot_gtable(ggplot_build(p4))
-pE <- ggplot_gtable(ggplot_build(p5))
-maxWidth = grid::unit.pmax(pA$widths[2:3], pB$widths[2:3], pD$widths[2:3], pD$widths[2:3], pE$widths[2:3])
+pout <- p1 + p2 + p3 + p4 + p5 + p6 + p7 + plot_layout(ncol = 2, guides = 'collect') & 
+  theme(
+    legend.position = 'bottom'
+  )
 
-# Set the widths
-pA$widths[2:3] <- maxWidth
-pB$widths[2:3] <- maxWidth
-pC$widths[2:3] <- maxWidth
-pD$widths[2:3] <- maxWidth
-pE$widths[2:3] <- maxWidth
-
-png(here('figs/chltrends.png'), height = 10, width = 10, res = 300, units = 'in')
-grid.arrange(
-  p1leg,
-  arrangeGrob(pA, pB, ncol = 2),
-  arrangeGrob(pC, pD, ncol = 2),
-  arrangeGrob(pE, ncol = 2),
-  ncol = 1, heights = c(0.1, 1, 1, 1)
-)
+png(here('figs/chltrends.png'), height = 12, width = 12, res = 300, units = 'in')
+pout
 dev.off()
