@@ -8,6 +8,7 @@ library(stringr)
 library(grid)
 library(USAboundaries)
 library(gridExtra)
+library(tbeptools)
 
 source(here('R/funcs.R'))
 
@@ -297,10 +298,12 @@ pC$widths[2:3] <- maxWidth
 pD$widths[2:3] <- maxWidth
 pE$widths[2:3] <- maxWidth
 
+png(here('figs/chltrends.png'), height = 10, width = 10, res = 300, units = 'in')
 grid.arrange(
   p1leg,
   arrangeGrob(pA, pB, ncol = 2),
   arrangeGrob(pC, pD, ncol = 2),
-  arrangeGrob(pE, ncol = 1),
+  arrangeGrob(pE, ncol = 2),
   ncol = 1, heights = c(0.1, 1, 1, 1)
 )
+dev.off()
