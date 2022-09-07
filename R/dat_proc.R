@@ -4,6 +4,7 @@ library(dplyr)
 library(sf)
 library(lubridate)
 library(tbeptools)
+library(readxl)
 
 # copy 2020 lulc data -------------------------------------------------------------------------
 
@@ -22,7 +23,6 @@ fluccslkup <- read.dbf('T:/05_GIS/TBEP/LULC_PROCESSED/SWFWMD_2020_LULC_SEAGRASS_
   unique
 
 save(fluccslkup, file = here('data/fluccslkup.RData'))
-
 
 # BCBS, TCB, and MR chlorophyll data ----------------------------------------------------------
 
