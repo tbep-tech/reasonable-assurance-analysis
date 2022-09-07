@@ -9,6 +9,7 @@ library(grid)
 library(USAboundaries)
 library(patchwork)
 library(tbeptools)
+library(ggfx)
 
 source(here('R/funcs.R'))
 
@@ -279,4 +280,63 @@ pout <- p1 + p2 + p3 + p4 + p5 + p6 + p7 + plot_layout(ncol = 2, guides = 'colle
 
 png(here('figs/chltrends.png'), height = 12, width = 12, res = 300, units = 'in')
 pout
+dev.off()
+
+# tn lbs per year per person ------------------------------------------------------------------
+
+# tn loads from load-estimates repo
+load(url('https://github.com/tbep-tech/load-estimates/raw/main/data/totanndat.RData'))
+
+# pop data from state-of-the-bay repo
+load(url('https://github.com/tbep-tech/State-of-the-Bay/raw/master/data/popdat.RData'))
+
+# T:\04_STAFF\ED\04_DATA\TB_LOADS\TNLoad_per_Capita_1976-2016_DRAFTLOADS_06022017.xlsx
+# tn load from kg to tons
+worstcase <- tibble(
+  year = 1976, 
+  tn_load = 9904, 
+  pop = 1358245
+)
+
+loadpers <- totanndat %>% 
+  filter(bay_segment %in% 'All Segments (- N. BCB)') %>% 
+  select(year, tn_load) %>% 
+  left_join(popdat, by = c('year' = 'yr')) %>% 
+  bind_rows(worstcase) %>% 
+  mutate(
+    tn_load = tn_load * 2000, # tons to lbs
+    yrcat = case_when(
+      year <= 1976 ~ '1976\n(Worst Case)',
+      year > 1976 & year <= 1990 ~ '1990\n(Loads from 1985-1990)',
+      year > 1990 & year <= 2000 ~ '2000\n(Loads from 1991-2000)', 
+      year > 2000 & year <= 2010 ~ '2010\n(Loads from 2001-2010)', 
+      year > 2010 & year <= 2020 ~ '2020\n(Loads from 2011-2020)', 
+      year > 2020 ~ '2021\n(Loads from 2021'
+    )
+  ) %>% 
+  group_by(yrcat) %>% 
+  summarise(
+    tn_load = mean(tn_load),
+    pop = mean(pop), 
+    .groups = 'drop'
+  ) %>% 
+  mutate(
+    lbsyrper = tn_load / pop
+  )
+
+p <- ggplot(loadpers, aes(x = yrcat, y = lbsyrper)) + 
+  with_shadow(geom_bar(fill = '#00806E', stat = 'identity', colour = 'black', width = 0.7, alpha = 0.5), sigma = 2.7, x_offset = 0, y_offset = 0) +
+  scale_y_continuous(expand = c(0, 0), limits = c(0, 1.1 * max(loadpers$lbsyrper, na.rm = T))) + 
+  theme_minimal() + 
+  theme(
+    panel.grid.minor = element_blank(),
+    panel.grid.major.x = element_blank()
+  ) +
+  labs(
+    x = 'Time Period', 
+    y = 'TN Load Entering Tampa Bay per Capita Estimate\n(lbs. / yr / person)'
+  )
+
+png(here('figs/tnpercapita.png'), height = 4, width = 9, res = 300, units = 'in')
+print(p)
 dev.off()
