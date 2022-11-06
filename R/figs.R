@@ -10,6 +10,9 @@ library(USAboundaries)
 library(patchwork)
 library(tbeptools)
 library(ggfx)
+library(haven)
+library(gg)
+library(patchwork)
 
 source(here('R/funcs.R'))
 
@@ -338,5 +341,92 @@ p <- ggplot(loadpers, aes(x = yrcat, y = lbsyrper)) +
   )
 
 png(here('figs/tnpercapita.png'), height = 4, width = 9, res = 300, units = 'in')
+print(p)
+dev.off()
+
+# tn v hy all segs ----------------------------------------------------------------------------
+
+# ref lines, all from 2009 Reasonal Assurance Addendum (except tphy, from RP email 11/4/22)
+# https://drive.google.com/file/d/10IjJAfcGFf007a5VdPXAUtUi4dx-cmsA/view
+reflns <- data.frame(
+  bay_segment = c("Old Tampa Bay", "Hillsborough Bay", "Middle Tampa Bay", "Lower Tampa Bay", "Remainder Lower Tampa Bay", "Boca Ciega Bay South", "Terra Ceia Bay", "Manatee River"), 
+  tnhyref = c(1.08, 1.62, 1.24, 0.97, 1.59, 0.97, 1.10, 1.80),
+  tphyref = c(0.23, 1.28, 0.24, 0.14, 0.52, 0.06, 0.14, 0.37)
+)
+
+allsegdat <- read_sas('https://github.com/tbep-tech/load-estimates/raw/main/data/raw/tb_rasegsanntntph2o_8521.sas7bdat') %>% 
+  mutate(
+    bay_segment = case_when(
+      BAY_SEG == 1 ~ 'Old Tampa Bay', 
+      BAY_SEG == 2 ~ 'Hillsborough Bay', 
+      BAY_SEG == 3 ~ 'Middle Tampa Bay', 
+      BAY_SEG == 4 ~ 'Lower Tampa Bay', 
+      BAY_SEG == 55 ~ 'Boca Ciega Bay South',
+      BAY_SEG == 6 ~ 'Terra Ceia Bay', 
+      BAY_SEG == 7 ~ 'Manatee River'
+    )
+  )
+
+rltbdat <- read_sas('https://github.com/tbep-tech/load-estimates/raw/main/data/raw/tb_rasegsanntntph2o_8521.sas7bdat') %>% 
+  mutate(
+    bay_segment = case_when(
+      BAY_SEG %in% c(55, 6, 7) ~ 'Remainder Lower Tampa Bay',
+      T ~ NA_character_
+    )
+  ) %>% 
+  filter(!is.na(bay_segment))
+
+# combine
+allsegdat <- allsegdat %>% 
+  bind_rows(rltbdat) %>% 
+  rename(
+    year = YEAR, 
+    tn_load = TN_tons, 
+    tp_load = TP_tons, 
+    hy_load = h2oload10e6m3
+  ) %>% 
+  group_by(year, bay_segment) %>% 
+  summarise(
+    tn_load = sum(tn_load), 
+    tp_load = sum(tp_load), 
+    hy_load = sum(hy_load), 
+    .groups = 'drop'
+  ) %>% 
+  left_join(reflns, by = 'bay_segment') %>% 
+  mutate(
+    tnhy = tn_load / hy_load, 
+    tphy = tp_load / hy_load,
+    bay_segment = factor(bay_segment, 
+                         levels = c("Old Tampa Bay", "Hillsborough Bay", "Middle Tampa Bay", "Lower Tampa Bay", "Remainder Lower Tampa Bay", "Boca Ciega Bay South", "Terra Ceia Bay", "Manatee River")
+    )
+  )
+
+p1 <- ggplot(allsegdat, aes(x = year, y = tnhy)) + 
+  geom_line() + 
+  geom_hline(aes(yintercept = tnhyref), linetype = 'dashed') + 
+  geom_point() + 
+  facet_wrap(~bay_segment, ncol = 1, scales = 'free_y') + 
+  theme_minimal() + 
+  labs(
+    x = NULL, 
+    y = 'tons / million m3', 
+    title = '(a) Ratio of TN Load to Hydrologic Load'
+  )
+
+p2 <- ggplot(allsegdat, aes(x = year, y = tphy)) + 
+  geom_line() + 
+  geom_hline(aes(yintercept = tphyref), linetype = 'dashed') + 
+  geom_point() + 
+  facet_wrap(~bay_segment, ncol = 1, scales = 'free_y') + 
+  theme_minimal() + 
+  labs(
+    x = NULL, 
+    y = NULL, 
+    title = '(b) Ratio of TP Load to Hydrologic Load'
+  )
+
+p <- p1 + p2 + plot_layout(ncol = 2, width = c(1, 0.95))
+
+png(here('figs/loadratios.png'), height = 10, width = 9, res = 300, units = 'in')
 print(p)
 dev.off()
