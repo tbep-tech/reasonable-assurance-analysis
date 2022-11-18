@@ -11,7 +11,6 @@ library(patchwork)
 library(tbeptools)
 library(ggfx)
 library(haven)
-library(gg)
 library(patchwork)
 
 source(here('R/funcs.R'))
