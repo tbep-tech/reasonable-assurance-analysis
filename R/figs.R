@@ -313,7 +313,7 @@ loadpers <- totanndat %>%
       year > 1990 & year <= 2000 ~ '2000\n(Loads from 1991-2000)', 
       year > 2000 & year <= 2010 ~ '2010\n(Loads from 2001-2010)', 
       year > 2010 & year <= 2020 ~ '2020\n(Loads from 2011-2020)', 
-      year > 2020 ~ '2021\n(Loads from 2021'
+      year > 2020 ~ '2021\n(Loads from 2021)'
     )
   ) %>% 
   group_by(yrcat) %>% 
