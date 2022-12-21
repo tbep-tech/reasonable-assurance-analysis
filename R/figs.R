@@ -508,7 +508,7 @@ p <- ggplot(toplo, aes(x = factor(year), y = acres)) +
         legend.text = element_text(size = 16, colour = 'black'),
         axis.text.x = element_text(colour = 'black', angle = 45, size = 8, hjust = 1), 
         strip.background = element_blank(), 
-        strip.text = element_text(hjust = 0, size = 12)
+        strip.text = element_text(hjust = 0, size = 13)
   ) + 
   labs(
     y = 'Seagrass Coverage (x1,000 acres)', 
