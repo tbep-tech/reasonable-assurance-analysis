@@ -12,6 +12,7 @@ library(tbeptools)
 library(ggfx)
 library(haven)
 library(patchwork)
+library(ggfx)
 
 source(here('R/funcs.R'))
 
@@ -428,5 +429,93 @@ p <- p1 + p2 + plot_layout(ncol = 2, width = c(1, 0.95))
 
 png(here('figs/loadratios.png'), height = 10, width = 9, res = 300, units = 'in')
 print(p)
+dev.off()
+
+# seagrass coverage by bay segment ------------------------------------------------------------
+
+fls <- list.files(path = '../hmpu-workflow/data', pattern = 'sgdat', full.names = T)
+
+for(fl in fls){
+  cat(fl, '\n')
+  load(file = fl)
+}
+
+st_layers('T:/05_GIS/SWFWMD/Seagrass/2022_Seagrass/provisional/DraftMaps2022_1130.gdb/DraftMaps2022_1130.gdb')
+
+sgdat2022 <- st_read('T:/05_GIS/SWFWMD/Seagrass/2022_Seagrass/provisional/DraftMaps2022_1130.gdb/DraftMaps2022_1130.gdb', 
+                     layer = 'Seagrass_in_2022_Suncoast') %>% 
+  select(FLUCCSCODE = FLUCCS_Code) %>% 
+  filter(FLUCCSCODE %in% c(9113, 9116)) %>% 
+  st_cast('MULTIPOLYGON')
+
+
+
+levs <- c('oldTampaBay', 'hillsboroughBay', 'middleTampaBay', 'lowerTampaBay', 'bocaCiegaBay', 'terraCieaBay', 'manateeRiver')
+labs <- c('Old Tampa Bay', 'Hillsborough Bay', 'Middle Tampa Bay', 'Lower Tampa Bay', 'Boca Ciega Bay', 'Terra Ceia Bay', 'Manatee River')
+
+segswfwmd <- st_read('T:/05_GIS/SWFWMD/Seagrass/2022_Seagrass/provisional/DraftMaps2022_1130.gdb/DraftMaps2022_1130.gdb', 
+                     layer = 'suncoastSeagrassSegments') %>% 
+  filter(waterbodyName %in% levs) %>% 
+  mutate(
+    waterbodyName = factor(waterbodyName, levels = levs, labels = labs)
+  ) %>% 
+  select(segment = waterbodyName)
+
+
+sgyrs <- fls %>% 
+  basename %>% 
+  gsub('\\.RData$', '', .) %>% 
+  c(., 'sgdat2022')
+
+sgsegest <- NULL
+for(sgyr in sgyrs){
+  
+  cat(sgyr, '\n')
+  
+  yr <- gsub('sgdat', '', sgyr)
+  
+  dat <- get(sgyr) %>% 
+    filter(FLUCCSCODE %in% c(9113, 9116)) %>% 
+    st_union() %>% 
+    st_transform(crs = st_crs(segswfwmd)) %>% 
+    st_intersection(segswfwmd, .) %>% 
+    mutate(
+      acres = st_area(.), 
+      acres = set_units(acres, 'acres'), 
+      acres = as.numeric(acres)
+    ) %>% 
+    st_set_geometry(NULL) %>% 
+    mutate(
+      year = as.numeric(yr)
+    )
+  
+  sgsegest <- rbind(sgsegest, dat)
+  
+}
+
+toplo <- sgsegest %>% 
+  mutate(acres = acres / 1000)
+
+p <- ggplot(toplo, aes(x = factor(year), y = acres)) +
+  geom_rect(xmin = 14.5, xmax = 17.5, ymin = -Inf, ymax = Inf, fill = 'darkgrey', alpha = 0.8) +
+  with_shadow(geom_bar(fill = '#00806E', stat = 'identity', colour = 'black', width = 0.6), sigma = 2.7, x_offset = 0, y_offset = 0) +
+  facet_wrap(~segment, ncol = 2, scales = 'free') +
+  theme(panel.grid.minor=element_blank(),
+        panel.grid.major=element_blank(),
+        plot.background = element_rect(fill = NA, color = NA),
+        axis.text.y = element_text(colour = 'black'),
+        plot.title = element_text(size = 22, colour = 'black'),
+        legend.text = element_text(size = 16, colour = 'black'),
+        axis.text.x = element_text(colour = 'black', angle = 45, size = 8, hjust = 1), 
+        strip.background = element_blank(), 
+        strip.text = element_text(hjust = 0, size = 12)
+  ) + 
+  labs(
+    y = 'Seagrass Coverage (x1,000 acres)', 
+    x = NULL
+  )
+
+png(here('figs/sgsegtrend.png'), height = 7, width = 7, res = 300, units = 'in')
+p
 dev.off()
 
