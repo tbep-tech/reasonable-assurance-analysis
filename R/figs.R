@@ -481,7 +481,7 @@ for(sgyr in sgyrs){
     st_intersection(segswfwmd, .) %>% 
     mutate(
       acres = st_area(.), 
-      acres = set_units(acres, 'acres'), 
+      acres = units::set_units(acres, 'acres'), 
       acres = as.numeric(acres)
     ) %>% 
     st_set_geometry(NULL) %>% 
