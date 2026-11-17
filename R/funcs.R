@@ -264,3 +264,101 @@ raanlz_avedat <- function(datin, partialyr = FALSE){
   return(out)
   
 }
+
+# calculate difference between updated and original dps data for hfc/city of tampa
+# tn, tp, tss, bod, hy
+# tn, tp, tss, bod as tons
+# hy as 10^6 m^3
+#
+# results as per month or per year based on agg fun
+# total logical indicating if diffs are separated as reuse/end of pipe or total of both
+# optional varsel as character string for one to many loading variables to return only as diff in wide format
+dpsdiff_fun <- function(dpsupdate, annual = F, total = F, varsel = NULL){
+  
+  ##
+  # original data
+  # domestic point source prior to 2017-2021 RA 
+  dpsmosdat1 <- read_sas(here('data-raw/dps0420monthentbas.sas7bdat')) %>% 
+    filter(Year < 2017)
+  dpsmosdat2 <- read_sas(here('data-raw/dps1721monthentbas.sas7bdat')) 
+  
+  olddat <- bind_rows(dpsmosdat1, dpsmosdat2) %>% 
+    filter(entity == 'Tampa') %>% 
+    filter(Year > 2011) %>%  # earliest year in updated data is 2012
+    mutate(
+      source = case_when(
+        grepl('REUSE$', source2) ~ 'DPS - reuse', 
+        grepl('SW$', source2) ~ 'DPS - end of pipe'
+      )
+    ) %>% 
+    select(
+      Year,
+      Month,
+      entity, 
+      source, 
+      tn_load = tnloadtons, 
+      tp_load = tploadtons, 
+      tss_load = tssloadtons, 
+      bod_load = bodloadtons,
+      hy_load = h2oload10e6m3
+    )
+  
+  ##
+  # hfc/city of tampa updated data
+  newdat <- dpsupdate %>% 
+    filter(Year < 2022)
+  
+  ##
+  # combine
+  
+  # prep for plot
+  cmbdat <- full_join(olddat, newdat, by = c('Year', 'Month', 'entity', 'source'), suffix = c('.old', '.new')) %>% 
+    pivot_longer(names_to = 'var', values_to = 'val', -c(Year, Month, entity, source, bay_segment)) %>%
+    separate(var, into = c('var', 'type'), sep = '\\.') %>% 
+    pivot_wider(names_from = type, values_from = val) %>% 
+    rename(year = Year, month = Month)
+  
+  # get total dps if true
+  if(total)
+    cmbdat <- cmbdat %>% 
+    mutate(
+      source = 'DPS'
+    ) %>% 
+    summarise(
+      old = sum(old, na.rm = T), 
+      new = sum(new, na.rm = T), 
+      .by = c(year, month, entity, source, bay_segment, var)
+    )
+  
+  # get annual loads if true
+  if(annual)
+    cmbdat <- cmbdat %>% 
+    summarize(
+      old = sum(old, na.rm = T), 
+      new = sum(new, na.rm = T),
+      .by = c(year, entity, source, bay_segment, var)
+    )
+  
+  # get differece between new and original data
+  out <- cmbdat %>% 
+    mutate(
+      diffv = new - old
+    ) 
+  
+  # subset variables, return only diff in wide format
+  if(!is.null(varsel)){
+    
+    if(any(!varsel %in% c('tn_load', 'tp_load', 'tss_load', 'bod_load', 'hy_load')))
+      stop('varsel must be one to many of tn_load, tp_load, tss_load, bod_load, hy_load')
+    
+    out <- out %>%
+      filter(var %in% varsel) %>%
+      select(-new, -old) %>%
+      mutate(var = paste0(var, '_diffv')) %>%
+      pivot_wider(names_from = 'var', values_from = 'diffv')
+    
+  }
+  
+  return(out)
+  
+}

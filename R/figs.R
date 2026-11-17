@@ -18,9 +18,10 @@ source(here('R/funcs.R'))
 
 # current land use figure ---------------------------------------------------------------------
 
-load(file = here('data/lulc2020.RData'))
-load(file = here('data/sgdat2020.RData'))
+load(file = here('data/lulc2023.RData'))
+load(file = here('data/sgdat2024.RData'))
 load(file = here('data/fluccslkup.RData'))
+load(file = here('data/tbep2225.RData'))
 
 # from T:\05_GIS\TBEP\2017_LULC_TBEP_Extent+2020_Seagrass.mxd
 fluccsconv <- list(
@@ -74,12 +75,12 @@ fluccsconv <- list(
 #   summarise(totals = sum(AREA_ACRES), .groups = 'drop') %>% 
 #   mutate(pct = 100 * (totals / sum(totals)))
 
-tomap1 <- lulc2020 %>%
+tomap1 <- lulc2023 %>%
   left_join(fluccsconv, by = 'FLUCCSCODE') %>%
   filter(!is.na(name) )%>%
   st_transform(crs = 4326)
 
-tomap2 <- sgdat2020 %>%
+tomap2 <- sgdat2024 %>%
   left_join(fluccsconv, by = 'FLUCCSCODE') %>%
   filter(!is.na(name)) %>%
   st_transform(crs = 4326)
@@ -99,7 +100,7 @@ dat_ext <- tomap1 %>%
   unname
 
 # stamen base map
-bsmap1 <- get_stamenmap(bbox = dat_ext, maptype = 'toner-background', zoom = 11)
+bsmap1 <- get_stadiamap(bbox = dat_ext, maptype = 'stamen_toner_background', zoom = 11)
 
 # change opacity of basemap
 mapatt <- attributes(bsmap1)
@@ -228,7 +229,7 @@ dat_ext <- tbimpaired %>%
   unname
 
 # stamen base map
-bsmap1 <- get_stamenmap(bbox = dat_ext, maptype = 'toner-background', zoom = 12)
+bsmap1 <- get_stadiamap(bbox = dat_ext, maptype = 'stamen_toner_background', zoom = 12)
 
 # change opacity of basemap
 mapatt <- attributes(bsmap1)
@@ -265,7 +266,7 @@ dev.off()
 
 load(file = here('data/chldat.RData'))
 
-maxyr <- 2021
+maxyr <- 2025
 yrrng <- c(1975, maxyr)
 
 p1 <- show_rathrplot(chldat, bay_segment = "OTB", thr = "chla", yrrng = yrrng, thrs = T)
@@ -291,7 +292,7 @@ dev.off()
 load(url('https://github.com/tbep-tech/load-estimates/raw/main/data/totanndat.RData'))
 
 # pop data from state-of-the-bay repo
-load(url('https://github.com/tbep-tech/State-of-the-Bay/raw/master/data/popdat.RData'))
+load(here('data/popdat.RData'))
 
 # T:\04_STAFF\ED\04_DATA\TB_LOADS\TNLoad_per_Capita_1976-2016_DRAFTLOADS_06022017.xlsx
 # tn load from kg to tons
@@ -314,7 +315,7 @@ loadpers <- totanndat %>%
       year > 1990 & year <= 2000 ~ '2000\n(Loads from 1991-2000)', 
       year > 2000 & year <= 2010 ~ '2010\n(Loads from 2001-2010)', 
       year > 2010 & year <= 2020 ~ '2020\n(Loads from 2011-2020)', 
-      year > 2020 ~ '2021\n(Loads from 2021)'
+      year > 2020 ~ '2021-2025\n(Loads from 2021-2025)'
     )
   ) %>% 
   group_by(yrcat) %>% 
@@ -346,7 +347,7 @@ dev.off()
 
 # tn v hy all segs ----------------------------------------------------------------------------
 
-# ref lines, all from 2009 Reasonal Assurance Addendum (except tphy, from RP email 11/4/22)
+# ref lines, all from 2009 Reasonable Assurance Addendum (except tphy, from RP email 11/4/22)
 # https://drive.google.com/file/d/10IjJAfcGFf007a5VdPXAUtUi4dx-cmsA/view
 reflns <- data.frame(
   bay_segment = c("Old Tampa Bay", "Hillsborough Bay", "Middle Tampa Bay", "Lower Tampa Bay", "Remainder Lower Tampa Bay", "Boca Ciega Bay South", "Terra Ceia Bay", "Manatee River"), 
@@ -354,44 +355,11 @@ reflns <- data.frame(
   tphyref = c(0.23, 1.28, 0.24, 0.14, 0.52, 0.06, 0.14, 0.37)
 )
 
-allsegdat <- read_sas('https://github.com/tbep-tech/load-estimates/raw/main/data/raw/tb_rasegsanntntph2o_8521.sas7bdat') %>% 
-  mutate(
-    bay_segment = case_when(
-      BAY_SEG == 1 ~ 'Old Tampa Bay', 
-      BAY_SEG == 2 ~ 'Hillsborough Bay', 
-      BAY_SEG == 3 ~ 'Middle Tampa Bay', 
-      BAY_SEG == 4 ~ 'Lower Tampa Bay', 
-      BAY_SEG == 55 ~ 'Boca Ciega Bay South',
-      BAY_SEG == 6 ~ 'Terra Ceia Bay', 
-      BAY_SEG == 7 ~ 'Manatee River'
-    )
-  )
+#Process any new loading data through data_proc.R and load data here before generating new figure
 
-rltbdat <- read_sas('https://github.com/tbep-tech/load-estimates/raw/main/data/raw/tb_rasegsanntntph2o_8521.sas7bdat') %>% 
-  mutate(
-    bay_segment = case_when(
-      BAY_SEG %in% c(55, 6, 7) ~ 'Remainder Lower Tampa Bay',
-      T ~ NA_character_
-    )
-  ) %>% 
-  filter(!is.na(bay_segment))
+load(here('data/allsegdat8526.RData'))
 
-# combine
-allsegdat <- allsegdat %>% 
-  bind_rows(rltbdat) %>% 
-  rename(
-    year = YEAR, 
-    tn_load = TN_tons, 
-    tp_load = TP_tons, 
-    hy_load = h2oload10e6m3
-  ) %>% 
-  group_by(year, bay_segment) %>% 
-  summarise(
-    tn_load = sum(tn_load), 
-    tp_load = sum(tp_load), 
-    hy_load = sum(hy_load), 
-    .groups = 'drop'
-  ) %>% 
+allsegdat <- allsegdat8525 %>% 
   left_join(reflns, by = 'bay_segment') %>% 
   mutate(
     tnhy = tn_load / hy_load, 
@@ -430,6 +398,7 @@ p <- p1 + p2 + plot_layout(ncol = 2, width = c(1, 0.95))
 png(here('figs/loadratios.png'), height = 10, width = 9, res = 300, units = 'in')
 print(p)
 dev.off()
+write.csv(allsegdat, file = here('data/loadratios1985-2025.csv'), row.names = FALSE)
 
 # seagrass coverage by bay segment ------------------------------------------------------------
 
