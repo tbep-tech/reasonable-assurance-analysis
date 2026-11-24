@@ -1,0 +1,71 @@
+---
+title: "Code & Data Provenance"
+---
+
+# Code & data provenance
+
+Every figure and table in this book is produced from the analysis code in
+[`tbep-tech/reasonable-assurance-analysis`](https://github.com/tbep-tech/reasonable-assurance-analysis).
+The table below maps each deliverable to its source.
+
+```{r}
+#| label: tbl-provenance
+library(knitr)
+prov <- data.frame(
+  Deliverable = c(
+    "Fig 1 — Watershed LULC", "Fig 2 — Chlorophyll-a trends", "Fig 6 — WBID attainment",
+    "Fig 7 — TN load by source", "Fig 8 — Per-capita TN", "Fig 9 — Delivery ratios",
+    "Fig 10 — TN load vs. population", "Figs 3 & 4 — Seagrass", "Table 1 — Loading sources",
+    "Appendix 6 — Delivery ratios", "Data assembly (all)", "Shared functions"
+  ),
+  Source = c(
+    "R/figs.R -> current land use figure", "R/figs.R -> annual chl means all segments",
+    "R/figs.R -> wbid attainments", "tbep-tech/load-estimates (external)",
+    "R/figs.R -> tn lbs per year per person", "R/figs.R -> tn v hy all segs",
+    "tbep-tech/load-estimates (external)", "R/figs.R -> seagrass coverage by bay segment",
+    "tbep-tech/load-estimates (external)", "R/docs.R -> 2027 RA Update",
+    "R/dat_proc.R", "R/funcs.R"
+  ),
+  `Data object(s)` = c(
+    "data/lulc2023.RData, data/sgdat2024.RData, data/fluccslkup.RData",
+    "data/chldat.RData", "FDEP Nutrients_305b x RA watershed", "load-estimates outputs",
+    "totanndat (load-estimates), data/popdat.RData",
+    "data/allsegdat8526.RData -> data/loadratios1985-2025.csv", "load-estimates outputs",
+    "SWFWMD Suncoast seagrass series", "load-estimates outputs", "data/loadratios1985-2025.csv",
+    "ACS/tidycensus, chlorophyll, LULC, seagrass",
+    "show_rathrplot(), raanlz_avedat(), dpsdiff_fun()"
+  ),
+  check.names = FALSE
+)
+kable(prov, format = "html", table.attr = 'class="table table-sm"')
+```
+
+Figures 1, 2, 3, 4, 6, 8, and 9 of the RA Update are generated in this repository; Figures 5, 7, 10,
+and 11 and the compliance / allocation tables are maintained in the RA Update document or the
+`load-estimates` pipeline.
+
+## Pipeline order
+
+```
+R/dat_proc.R      # assemble population, chlorophyll, LULC, seagrass, loading inputs -> data/
+   |
+   +--> R/figs.R  # Figures 1, 2, 4, 6, 8, 9 -> figs/ ; writes data/loadratios1985-2025.csv
+   |
+   +--> R/docs.R  # delivery-ratio table -> docs/loadratiotab1985-2025.docx
+```
+
+## External dependencies
+
+- [`tbep-tech/load-estimates`](https://github.com/tbep-tech/load-estimates) — annual TN/TP/hydrologic load estimates; Figures 7 & 10 and Table 1 source data
+- [`tbeptools`](https://tbep-tech.github.io/tbeptools/) — thresholds, segment averaging, RA plotting helpers
+- US Census Bureau ACS (via `tidycensus`) — Tampa MSA population
+- SWFWMD — land use / land cover and seagrass coverage mapping
+- FDEP — 303(d)/305(b) impaired-waters assessment categories
+
+::: {.provenance}
+Web companion to the 2027 Reasonable Assurance Update. Narrative text adapted from the 2027 RA Update
+document (2026 Q4 draft); figures and tables generated from
+[`tbep-tech/reasonable-assurance-analysis`](https://github.com/tbep-tech/reasonable-assurance-analysis).
+Several figures in the source document still carry drafting placeholders (e.g., the final 2026 baywide
+seagrass acreage reconciliation); these should be reconciled against the final signed submittal.
+:::

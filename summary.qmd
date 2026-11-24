@@ -1,0 +1,150 @@
+---
+title: "Monitoring, Corrective Actions & Summary"
+---
+
+# 4. Procedures for Monitoring and Reporting Results
+
+## 4.a. A description of the water quality monitoring program to be implemented
+
+**2027 RA Update:** No change. Existing monitoring includes monthly ambient collections by the
+Environmental Protection Commission of Hillsborough County, Manatee County, and Pinellas County.
+Samples from over 100 stations baywide are collected and analyzed monthly. These regional programs are
+considered among the top in the nation. Additional research investments to understand Old Tampa Bay's
+*Pyrodinium bahamense* bloom dynamics and internal nutrient fluxes have been made or are underway
+through Tampa Bay Environmental Restoration Fund (TBERF) grants.
+
+## 4.b. Quality Assurance/Quality Control elements of monitoring
+
+**2027 RA Update:** No change. All county monitoring programs and laboratories have State-approved
+Quality Assurance Plans and comply with FDEP's QA rule (Chapter 62-160), including FDEP-approved SOPs.
+All participating county laboratories are NELAC certified. Quarterly round-robin inter-laboratory
+comparisons are conducted by the Southwest Florida Regional Ambient Monitoring Program (SWFL RAMP).
+
+## 4.c. Procedures for entering all appropriate data into WIN/STORET:
+
+**2027 RA Update:** No change. County programs comply with the latest WIN data-upload procedures
+developed by FDEP. Through the SWFL RAMP, all Tampa Bay water quality monitoring data providers upload
+data to WIN.
+
+## 4.d. Responsible monitoring and reporting entity:
+
+**2027 RA Update:** No change. The three entities identified in Section 4.a continue to collect water
+quality data. TBEP staff and the NMC's technical support contractor assimilate and summarize the data
+annually to provide compliance assessment reports to FDEP. Reports for the 2022–2026 RA period are at
+<https://tbep.org/our-work/boards-committees/nitrogen-management-consortium/>.
+
+## 4.e. Frequency and reporting format for reporting monitoring results:
+
+**2027 RA Update:** No change. As part of this update, the TBEP and TBNMC funded development of
+estimated TN, TP, TSS, and BOD loads for the watershed over the 2022–2026 RA period
+(<https://tbep.org/tampa-bay-nitrogen-loads/>). The Consortium also updated a Screening Level Tool for
+Estimating Annual Hydrologic Loadings to Tampa Bay to assess annual compliance of
+hydrologically-adjusted allocations; these adjustment factors are reported annually within the NMC
+compliance assessment reports submitted to FDEP and EPA.
+
+## 4.f. Frequency and format for reporting on the implementation of all proposed management activities:
+
+**2027 RA Update:** No change. Formal reporting of results and action-plan projects continues every 5
+years. Annual assessment of bay water quality conditions continues during the 2027–2031 RA
+Implementation Period.
+
+## 4.g. Methods for evaluating progress towards goals:
+
+**2027 RA Update:** No change. Formal reporting of chlorophyll-*a* threshold compliance continues
+annually and integrates new seagrass acreage estimates or trends. If exceedances occur in two
+consecutive years in any bay segment, additional assessment steps are required. Additionally, the
+TBNMC re-assessed the assimilative capacity of the Old Tampa Bay segment over the 2022–2026 RA
+implementation period; revisions to bay-segment load targets, entity allocations, and numeric nutrient
+criteria were not recommended by the NMC, with FDEP concurring on Mar. 31, 2026 that additional
+projects and research be pursued in Old Tampa Bay to maintain its reasonable assurance determination.
+
+# 5. Description of Proposed Corrective Actions
+
+**2027 RA Update:** No annual exceedances of the chlorophyll-*a* threshold occurred in any bay segment
+during the 2022–2026 RA period. Bay managers continue to pursue management actions to improve Old
+Tampa Bay's ecological condition and water quality. Cooperative projects implemented over the period —
+many supported by the Tampa Bay Environmental Restoration Fund (TBERF) — include, among others:
+
+- **Characterizing Seagrass Stressors in Old Tampa Bay** (UF; 2026 TBERF) — stable-isotope and benthic-flux investigation of sulfide, light, and nutrient stress near seagrass transects.
+- **Oyster Reef Installations** (Oyster River Ecology; 2026 TBERF) — ~44,000 ft² of oyster reef habitat, including Safety Harbor (OTB) and Manatee River sites.
+- **Cypress Point Living Shoreline** (Tampa Bay Watch; 2025 TBERF) — oyster reefs and coastal wetland plantings in Old Tampa Bay.
+- **Micronutrient Drivers of Pyrodinium Blooms** (USF; 2025 TBERF) — role of vitamin B12 and bacterial communities in OTB harmful algal blooms.
+- **City of St. Petersburg Septic-to-Sewer Conversions** (2024 TBERF) — ~90 lbs/yr TN precluded; completed Nov. 2025.
+- **Old Tampa Bay Green Infrastructure Tool** (FSU; 2022 TBERF) — web decision-support tool for the Sweetwater Creek watershed; completed Mar. 2026.
+
+Additional habitat-restoration, stormwater-infrastructure, and point-source projects across the
+watershed cumulatively contribute to the bay's ecological improvement.
+
+# 6. Summary of Progress Since the 2022 Reasonable Assurance Update Report
+
+Continuing nitrogen-load-reduction efforts by NMC partners, combined with drought conditions through
+most of the period, supported adequate water quality for seagrass recovery baywide over 2022–2026.
+
+**Management actions & restoration investments**
+
+- More than **525 nitrogen load-reduction projects** implemented by Consortium participants since 1992; cumulatively, ~**983.4 tons/yr** of TN precluded from entering Tampa Bay over 1992–2026.
+- Since 1992, over **$1.0 billion** invested in nitrogen load-reduction projects; over **$2.84 billion** including land acquisition, preservation, and education (per the Tampa Bay Action Plan Database).
+- Baywide TN load reductions over 2022–2026 estimated at **33.1 tons/yr**; ongoing, planned, and budgeted post-2026 projects expected to reduce TN loading by ~**106.8 tons/yr** at a cost of **$137,428,003**.
+- Consortium partners maintain TN load allocations within the federally-recognized TMDLs (Tables 10–14), with entity-generated reductions retained as indefinite credits (2009 RA Addendum §IX.D).
+
+**Environmental indicators**
+
+- Baywide seagrass coverage in 2026 (31,563 acres) remained below the 41,655-acre 2016 peak; Old Tampa Bay continued to drive baywide loss while other segments were stable or increasing.
+- Chlorophyll-*a* thresholds were met across the major bay segments over 2022–2026, including the Old Tampa Bay turnaround relative to 2017–2021.
+
+# Appendix 6. TN and TP delivery ratios, 1985–2025
+
+Annual TN / TP delivery ratios (tons per million m³) for all eight nutrient regions, with the
+1992–1994 numeric-nutrient-criteria targets shown in parentheses in each column header. This table is
+the tabular companion to **Figure 9** (see *Overview*) and is built live from the repository data at
+render time.
+
+```{r}
+#| label: tbl-delivery
+library(dplyr)
+library(tidyr)
+library(knitr)
+library(here)
+
+seg_levels <- c(
+  "Old Tampa Bay (1.08 / 0.23)", "Hillsborough Bay (1.62 / 1.28)",
+  "Middle Tampa Bay (1.24 / 0.24)", "Lower Tampa Bay (0.97 / 0.14)",
+  "Remainder Lower Tampa Bay (1.59 / 0.52)", "Boca Ciega Bay South (0.97 / 0.06)",
+  "Terra Ceia Bay (1.1 / 0.14)", "Manatee River (1.8 / 0.37)"
+)
+
+totab <- read.csv(here("data", "loadratios1985-2025.csv"), check.names = FALSE) |>
+  mutate(
+    tnhy = round(tnhy, 2),
+    tphy = round(tphy, 2),
+    value = paste(tnhy, tphy, sep = " / "),
+    seg   = paste0(bay_segment, " (", tnhyref, " / ", tphyref, ")"),
+    seg   = factor(seg, levels = seg_levels)
+  ) |>
+  select(Year = year, seg, value) |>
+  pivot_wider(names_from = seg, values_from = value, names_sort = FALSE) |>
+  arrange(Year)
+
+totab <- totab[, c("Year", seg_levels)]
+
+cat('<div class="table-scroll">\n')
+print(kable(totab, format = "html", align = c("l", rep("c", length(seg_levels))),
+            table.attr = 'class="table table-sm"'))
+cat('\n</div>')
+```
+
+::: {.provenance}
+**Source:** [`R/docs.R`](https://github.com/tbep-tech/reasonable-assurance-analysis/blob/main/R/docs.R)
+→ section *2027 RA Update* (the repository renders this with `flextable` to
+`docs/loadratiotab1985-2025.docx`; here it is rebuilt inline from the same data) · **Data:**
+[`data/loadratios1985-2025.csv`](https://github.com/tbep-tech/reasonable-assurance-analysis/blob/main/data/loadratios1985-2025.csv)
+:::
+
+::: {.callout-note appearance="simple"}
+**Document-maintained sections.** The per-segment annual reasonable-assurance assessment steps
+(Figure 11; Tables 2–6), the 2027–2031 entity allocation tables (Tables 10–14), the Action Plan
+Database project tables (Tables 7–9), and the per-entity allocation **Appendices 1–5** are maintained
+in the RA Update document and the Consortium's entity-load workbooks. They draw on the same
+`load-estimates` outputs and the TBNMC Action Plan Database rather than on figure-generating code in
+this repository.
+:::

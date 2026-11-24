@@ -1,0 +1,140 @@
+/* ============================================================================
+   Tampa Bay Estuary Program / Nitrogen Management Consortium house style
+   Adapted from tbep-tech/tbnmc-compliance-assessment-2025 (styles.css)
+   Fonts: Rubik (headings) + Roboto (body) · TBEP blue #005293 / teal #00806E
+   ========================================================================= */
+
+/* Rubik — headings */
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@500;600;700&display=swap');
+/* Roboto — body + Roboto Condensed for the brand/title */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&family=Roboto+Condensed:wght@400;700&display=swap');
+
+/* ---- document body ---- */
+body {
+  font-family: 'Roboto', Helvetica, Arial, sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  color: #636363;
+}
+
+/* ---- headings ---- */
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 500;
+  color: #005293;
+  font-family: 'Rubik', Helvetica, Arial, Lucida, sans-serif;
+}
+h1 { font-size: 40px; }
+h2 { font-size: 32px; border-bottom: 2px solid #00806E; padding-bottom: .25rem; }
+h3 { font-size: 24px; }
+h4 { font-size: 18px; }
+h5 { font-size: 16px; }
+h6 { font-size: 14px; }
+
+/* ---- top navbar ---- */
+.navbar {
+  background-color: #00806E;
+  border-color: black;
+  font-family: 'Roboto', Helvetica, Arial, sans-serif;
+  font-weight: 300;
+}
+.navbar .navbar-title,
+.navbar-brand {
+  font-family: 'Roboto Condensed', 'Roboto', sans-serif;
+  font-weight: 700;
+  color: #ffffff;
+}
+.navbar .nav-link,
+.navbar .navbar-nav .nav-link {
+  color: #ffffff !important;
+}
+.navbar-nav li a:hover,
+.navbar-nav > .active > a,
+.navbar .nav-link:hover {
+  color: #fff !important;
+  background-color: #5c4a42 !important;
+  background-image: none !important;
+}
+
+/* ---- links (TBEP/WordPress orange) ---- */
+a {
+  color: #db5b25;
+  font-family: 'Roboto', Helvetica, Arial, Lucida, sans-serif;
+  font-weight: 500;
+  text-decoration: none;
+}
+a:visited { color: #db5b25; }
+a:hover   { color: #f57d05; }
+
+/* keep navbar + footer links readable on their dark/teal grounds */
+.navbar a, .navbar a:visited { color: #ffffff; }
+.nav-footer a, .nav-footer a:visited { color: #005293; }
+
+/* ---- left sidebar / TOC ---- */
+.sidebar, #quarto-margin-sidebar, #TOC, nav[role="doc-toc"] {
+  font-family: 'Roboto', Helvetica, Arial, sans-serif;
+  font-weight: 300;
+}
+nav[role="doc-toc"] a { color: #958984; }
+nav[role="doc-toc"] a:hover,
+nav[role="doc-toc"] .active { color: #00806E !important; }
+
+/* ---- figure captions & secondary text ---- */
+.caption, figcaption, .figure-caption,
+.quarto-figure figcaption {
+  font-family: 'Roboto', Helvetica, Arial, sans-serif;
+  font-weight: 300;
+  font-style: italic;
+  color: #958984;
+}
+
+/* ---- provenance / source note blocks ---- */
+.provenance {
+  font-size: .8rem;
+  color: #958984;
+  background: #f6f8f8;
+  border-left: 3px solid #00806E;
+  padding: .4rem .7rem;
+  margin: .3rem 0 1.6rem;
+  border-radius: 0 4px 4px 0;
+}
+.provenance code { background: #eef2f2; }
+
+/* ---- headline call-out ---- */
+.headline {
+  background: #eef6f4;
+  border: 1px solid #cfe5df;
+  border-radius: 6px;
+  padding: .8rem 1rem;
+}
+
+/* ---- scrollable data table (delivery ratios) ---- */
+.table-scroll {
+  max-height: 480px;
+  overflow: auto;
+  font-size: .8rem;
+  border: 1px solid #e3e3e3;
+  border-radius: 4px;
+}
+.table-scroll table { margin: 0; }
+.table-scroll thead th {
+  position: sticky;
+  top: 0;
+  background: #00806E;
+  color: #fff;
+  font-weight: 600;
+}
+
+/* ---- centered image helper ---- */
+#wrapper, .center { text-align: center; }
+.center { display: block; }
+figure img { border: 1px solid #e3e3e3; border-radius: 4px; }
+
+/* ---- book cover banner ---- */
+p > img[src$="header.png"],
+img[src$="header.png"] {
+  width: 100%;
+  max-width: 100%;
+  border: none;
+  border-radius: 0;
+  margin-bottom: 1.2rem;
+}

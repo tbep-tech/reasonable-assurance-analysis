@@ -1,0 +1,352 @@
+[
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "2027 Reasonable Assurance Plan Update",
+    "section": "",
+    "text": "Tampa Bay Nutrient Management Strategy\nThis book is the web companion to the 2027 Reasonable Assurance Plan (RA) Update prepared by the Tampa Bay Estuary Program (TBEP) and the Tampa Bay Nitrogen Management Consortium (NMC) for the Florida Department of Environmental Protection (FDEP) and US Environmental Protection Agency (USEPA). It presents the narrative, figures, and tables of the RA Update for the 2022–2026 reporting period, with each figure and table linked back to the analysis code that produces it in this repository, tbep-tech/reasonable-assurance-analysis.\n\n\n\n\n\n\nNoteReproducibility\n\n\n\nFigures and tables are generated programmatically, not hand-edited. Run R/dat_proc.R (data assembly) → R/figs.R (figures) and R/docs.R (tables). Loading inputs come from the companion tbep-tech/load-estimates pipeline; water-quality thresholds and segment averaging use the tbeptools R package. All historic and contemporary loading information is openly accessible at https://tbep.org/tampa-bay-nitrogen-loads.\n\n\nPrior Reasonable Assurance Updates were submitted in 2002, 2007 (with a 2009 Addendum), 2012, 2017, and 2022. As of the 2022 RA Update, FDEP concluded the document “satisfies the requirements for continued approval of the RAP,” and concurred that the proposed NMC corrective actions were “reasonable and sufficient to address the issues in Old Tampa Bay,” requesting periodic updates on corrective-action implementation over the 2022–2026 period.\n\nHeadline finding for 2022–2026: FDEP-adopted chlorophyll-a thresholds were met in all major bay segments over the 2022–2026 RA period (see Overview, Figure 2). This represents a marked improvement in overall water quality, particularly in Old Tampa Bay (OTB), which did not meet its chlorophyll-a numeric nutrient criteria in four of the five years of the preceding (2017–2021) period.\n\nUse the sidebar to navigate: the Overview chapter covers the waterbody, water-quality goals, nitrogen loading, and seagrass habitat; the Summary chapter covers corrective actions, progress since 2022, and the delivery-ratio table; and Provenance maps every deliverable to its source code.",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>2027 Reasonable Assurance Plan Update</span>"
+    ]
+  },
+  {
+    "objectID": "overview.html",
+    "href": "overview.html",
+    "title": "Overview",
+    "section": "",
+    "text": "1. Description of the Waterbody\nThe Tampa Bay estuary is located on the eastern shore of the Gulf of Mexico in Florida (Figure 1). At 882 km², it is Florida’s largest open-water estuary. More than 3 million people live in the 5,870 km² watershed. Land use in the watershed is mixed — about 32% undeveloped, 17% agricultural, 42% urban and suburban residential, and the remaining 9% mining. Major habitats include mangroves, salt marshes, salt barrens, and submerged aquatic vegetation.\nBetween 1950 and 1988, an estimated 42% of the seagrass acreage in Tampa Bay was lost, primarily through excess nitrogen loading and related increases in phytoplankton concentrations that limited light for seagrass survival and growth. In 1980, all municipal wastewater treatment plants were required to provide 100% reuse or Advanced Wastewater Treatment (AWT) for discharges directly to the bay and its tributaries; together with stormwater regulations enacted in the 1980s, these reduced nitrogen loads to the bay. The 1976 TN loadings are more than three times greater than current estimates (1976 = 9,904 tons TN/yr vs. a 2020s annual average of 3,321 tons TN/yr).\nThe Tampa Bay Nitrogen Management Consortium (NMC) was formed in 1996 and includes local governments and agencies, phosphate companies, port industries, electric utilities, and agricultural interests that work cooperatively in a voluntary framework to maintain nitrogen loads supporting seagrass restoration. In 2020, the TBEP and partners updated the Habitat Master Plan, adopting a goal of maintaining at least 40,000 acres of seagrass baywide.\nBetween 2022 and 2026, seagrass coverage increased by 1,426 acres baywide, while the Old Tampa Bay segment continued to see losses. Baywide seagrass coverage was estimated at 31,563 acres in 2026, remaining below the 40,000-acre protection and recovery goal for a second consecutive RA assessment period.",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Overview</span>"
+    ]
+  },
+  {
+    "objectID": "overview.html#a.-name",
+    "href": "overview.html#a.-name",
+    "title": "Overview",
+    "section": "1.a. Name:",
+    "text": "1.a. Name:\n2027 RA Update: No change. This document addresses the four main bay segments of Tampa Bay: Old Tampa Bay, Hillsborough Bay, Middle Tampa Bay and Lower Tampa Bay. As of the 2009 RA Addendum, an additional segment was included: “Remainder of Lower Tampa Bay,” which includes Terra Ceia Bay and portions of the Manatee River and southern Boca Ciega Bay (Figure 5). The Old Tampa Bay, Hillsborough Bay, Middle Tampa Bay and Lower Tampa Bay segments are identical to FDEP’s established estuary nutrient regions; the Remainder of Lower Tampa Bay RA Segment includes FDEP’s Boca Ciega Bay South, Terra Ceia Bay, and Manatee River Estuary nutrient regions (62-302.532(1), F.A.C.).",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Overview</span>"
+    ]
+  },
+  {
+    "objectID": "overview.html#b.-location",
+    "href": "overview.html#b.-location",
+    "title": "Overview",
+    "section": "1.b. Location:",
+    "text": "1.b. Location:\n2027 RA Update: No change. Please refer to Figures 1 and 5.",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Overview</span>"
+    ]
+  },
+  {
+    "objectID": "overview.html#c.-watershed8-digit-cataloging-unit-code",
+    "href": "overview.html#c.-watershed8-digit-cataloging-unit-code",
+    "title": "Overview",
+    "section": "1.c. Watershed/8-digit cataloging unit code:",
+    "text": "1.c. Watershed/8-digit cataloging unit code:\n2027 RA Update: No change. 03100206 Tampa Bay and coastal areas.",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Overview</span>"
+    ]
+  },
+  {
+    "objectID": "overview.html#d.-type-lake-stream-or-estuary-of-water",
+    "href": "overview.html#d.-type-lake-stream-or-estuary-of-water",
+    "title": "Overview",
+    "section": "1.d. Type (lake, stream or estuary) of water:",
+    "text": "1.d. Type (lake, stream or estuary) of water:\n2027 RA Update: No change. Estuary.",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Overview</span>"
+    ]
+  },
+  {
+    "objectID": "overview.html#e.-water-use-classification",
+    "href": "overview.html#e.-water-use-classification",
+    "title": "Overview",
+    "section": "1.e. Water use classification:",
+    "text": "1.e. Water use classification:\n2027 RA Update: Class II and III waters. See rule 62-302.400, F.A.C.",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Overview</span>"
+    ]
+  },
+  {
+    "objectID": "overview.html#f.-designated-use-of-waterbody",
+    "href": "overview.html#f.-designated-use-of-waterbody",
+    "title": "Overview",
+    "section": "1.f. Designated use of waterbody:",
+    "text": "1.f. Designated use of waterbody:\n2027 RA Update: No change. Per FDEP’s 2026 303(d)/305(b) Integrated Water Quality Assessment and the 2022–2024 Biennial Assessment, WBIDs in Tampa Bay proper are Category 2 (attaining some designated uses) or 5 (standards not attained, TMDL required). The Category 5 WBIDs in the Old Tampa Bay and Remainder of Lower Tampa Bay segments fall under the RA determination and are therefore treated as Category 4b (a pollutant-control mechanism provides reasonable assurance of future attainment) (Figure 6). This document does not address impairments related to Class II shellfish harvesting areas in Tampa Bay.\n\n\n\nFigure 6. FDEP surface-water quality assessment categories for WBIDs intersecting the Tampa Bay watershed.\n\n\n\nFigure 6 source: R/figs.R → section wbid attainments · Data: FDEP Nutrients_305b layer × RA segment watershed",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Overview</span>"
+    ]
+  },
+  {
+    "objectID": "overview.html#g.-area-of-the-waterbody",
+    "href": "overview.html#g.-area-of-the-waterbody",
+    "title": "Overview",
+    "section": "1.g. Area of the waterbody:",
+    "text": "1.g. Area of the waterbody:\n2027 RA Update: No change. The total surface area of the four major bay segments in Tampa Bay is 882 km² (approximately 341 square miles). When including the Remainder of Lower Tampa Bay, the total surface area is 1,006 km² (approximately 389 square miles).",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Overview</span>"
+    ]
+  },
+  {
+    "objectID": "overview.html#h.-pollutants-of-concern",
+    "href": "overview.html#h.-pollutants-of-concern",
+    "title": "Overview",
+    "section": "1.h. Pollutant(s) of concern:",
+    "text": "1.h. Pollutant(s) of concern:\n2027 RA Update: No change. The pollutant of concern is Total Nitrogen (TN), the limiting nutrient in Tampa Bay. Elevated nitrogen loading leads to excess algal growth (indicated by chlorophyll-a concentrations), which reduces light penetration and causes loss of seagrass.",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Overview</span>"
+    ]
+  },
+  {
+    "objectID": "overview.html#i.-suspected-or-documented-sources-of-pollutant-of-concern",
+    "href": "overview.html#i.-suspected-or-documented-sources-of-pollutant-of-concern",
+    "title": "Overview",
+    "section": "1.i. Suspected or documented sources of pollutant of concern:",
+    "text": "1.i. Suspected or documented sources of pollutant of concern:\n2027 RA Update: The TBEP has developed loading reports for Tampa Bay since 1985; the most recent estimates cover 2022–2026, openly accessible at https://tbep.org/tampa-bay-nitrogen-loads. Total loadings are less variable than during the 1985–early-2000s period (Figure 7); 2024 loadings were significantly influenced by rainfall from three tropical-storm systems. Per-capita TN loading has decreased over time (Figure 8), as has the amount of TN delivered per unit water in each major bay segment (Figure 9). Hydrologically-normalized total loads remain significantly below 1980s estimates despite a growing metropolitan population (Figure 10).\nTable 1. Major TN loading sources by RA period. Mean percentage contribution of major TN loading sources for each 5-year Tampa Bay RA period; the final column is the current 2022–2026 period.\n\n\n\n\n\n\n\n\n\n\n\n\nSource\n2002 RA(1997–2001)\n2007 RA(2002–2006)\n2012 RA(2007–2011)\n2017 RA(2012–2016)\n2022 RA(2017–2021)\n2027 RA(2022–2026)\n\n\n\n\nNPS / Stormwater\n59.3\n58.8\n51.3\n65.7\n60.8\n62.6\n\n\nDirect Atmospheric Deposition\n22.7\n18.2\n25.2\n17.1\n15.5\n15.3\n\n\nDomestic Wastewater\n9.6\n9.2\n14.7\n11.1\n12.8\n13.4\n\n\nIndustrial Wastewater\n3.9\n10.9\n6.8\n4.9\n6.2\n3.8\n\n\nIndustrial Fertilizer Material Losses\n0.7\n0.5\n0.4\n0.2\n0.2\n0.1\n\n\nGroundwater and Springs\n3.8\n2.4\n1.5\n1.0\n4.6\n4.8\n\n\n\n\n\n\n\n\n\nFigure 7 (stacked-area TN load by major source category for each RA segment, 1985–2026, with TMDL reference lines) and Figure 10 (hydrologically-normalized TN load vs. metropolitan population) are generated in the tbep-tech/load-estimates pipeline and embedded directly in the RA Update document.\n\n\n\n\n\n\nFigure 8. Per-capita TN load (lbs · person⁻¹ · yr⁻¹) entering Tampa Bay, from the 1976 “worst case” (9,904 tons TN; population 1,358,245) through the current 2021–2025 period.\n\n\n\nFigure 8 source: R/figs.R → section tn lbs per year per person · Data: totanndat (load-estimates), data/popdat.RData\n\n\n\n\nFigure 9. TN (panel a) and TP (panel b) delivery ratios — load per unit water (tons per million m³) — for each bay segment, 1985–2025. The dashed line is the 1992–1994 numeric nutrient criterion for that FDEP Estuary Nutrient Region. Every segment’s TN delivery ratio remains at or below its criterion.\n\n\n\nFigure 9 source: R/figs.R → section tn v hy all segs · Data: data/allsegdat8526.RData → data/loadratios1985-2025.csv · The tabular form is Appendix 6 in the Summary chapter.",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Overview</span>"
+    ]
+  },
+  {
+    "objectID": "overview.html#a.-water-quality-based-targets-or-aquatic-ecological-goals",
+    "href": "overview.html#a.-water-quality-based-targets-or-aquatic-ecological-goals",
+    "title": "Overview",
+    "section": "2.a. Water quality-based targets or aquatic ecological goals:",
+    "text": "2.a. Water quality-based targets or aquatic ecological goals:\n2027 RA Update: No change. The baywide seagrass restoration goal of 40,000 acres was adopted in 2020. Maintaining adequate water quality at adopted FDEP chlorophyll-a threshold levels in each major bay segment on an annual-average basis is the primary metric for assessing progress toward the seagrass restoration goal. A secondary goal — maintaining hydrologically-normalized total nitrogen loads to each major bay segment — was adopted with the 2009 RA Addendum and later codified as the numeric nutrient criteria for the Tampa Bay estuarine nutrient regions (62-302.532(1), F.A.C.). A compliance assessment framework was established and has been used for all subsequent RA updates (2009 RA Addendum, Section VIII).",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Overview</span>"
+    ]
+  },
+  {
+    "objectID": "overview.html#b.-averaging-period",
+    "href": "overview.html#b.-averaging-period",
+    "title": "Overview",
+    "section": "2.b. Averaging period:",
+    "text": "2.b. Averaging period:\n2027 RA Update: No change. The TBEP uses annual-average bay-segment uncorrected chlorophyll-a levels for tracking attainment, as approved by FDEP under the original 2002 RA submittal and adopted in 2012 as NNC. Assessment methods are documented in the tbeptools introduction; source code is at tbep-tech/wq-dash.\n\n\n\nFigure 2. Annual-average chlorophyll-a (µg·L⁻¹) for each of the seven FDEP estuarine nutrient regions, 1975–2025. The dotted line in each panel is the FDEP large-exceedance (“+2 se”) threshold.\n\n\n\nFigure 2 source: R/figs.R → section annual chl means all segments · Functions: show_rathrplot(), raanlz_avedat() in R/funcs.R · Data: data/chldat.RData",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Overview</span>"
+    ]
+  },
+  {
+    "objectID": "overview.html#c.-how-will-goals-result-in-restoration-of-impaired-designated-uses",
+    "href": "overview.html#c.-how-will-goals-result-in-restoration-of-impaired-designated-uses",
+    "title": "Overview",
+    "section": "2.c. How will goals result in restoration of impaired designated uses:",
+    "text": "2.c. How will goals result in restoration of impaired designated uses:\n2027 RA Update: No change. Maintaining chlorophyll-a concentrations at target levels is expected to maintain water clarity adequate to support seagrass at or above 40,000 acres throughout Tampa Bay, ensuring that external nutrient loads do not result in an imbalance in the flora or fauna of Tampa Bay.",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Overview</span>"
+    ]
+  },
+  {
+    "objectID": "overview.html#d.-determining-whether-additional-corrective-actions-are-needed",
+    "href": "overview.html#d.-determining-whether-additional-corrective-actions-are-needed",
+    "title": "Overview",
+    "section": "2.d. Determining whether additional corrective actions are needed:",
+    "text": "2.d. Determining whether additional corrective actions are needed:\n2027 RA Update: No changes to the TBEP’s annual management Decision Matrix process, the Tampa Bay NMC nutrient management strategy, or the allocation compliance assessment framework. Results of the bay-segment-specific compliance assessment over the 2022–2026 RA period are described in Figure 11 and Tables 2–6. For the 2022–2026 RA period, no annual exceedances of the chlorophyll-a thresholds nor of hydrologically-normalized total nitrogen loads were observed, and the TN and TP numeric nutrient criteria (Figure 9) were not exceeded.\n\n\n\nFigures 3 & 4. Biennial seagrass coverage (× 1,000 acres) by bay segment from the SWFWMD Suncoast seagrass mapping series; 2022–2026 saw increases in all segments except Old Tampa Bay.\n\n\n\nFigures 3 & 4 source: R/figs.R → section seagrass coverage by bay segment · Data: SWFWMD Suncoast seagrass series × seagrass segments",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Overview</span>"
+    ]
+  },
+  {
+    "objectID": "overview.html#a.-participating-entities",
+    "href": "overview.html#a.-participating-entities",
+    "title": "Overview",
+    "section": "3.a. Participating Entities:",
+    "text": "3.a. Participating Entities:\n2027 RA Update: The Tampa Bay Estuary Program Policy Board includes the City of Tampa, City of Clearwater, City of St. Petersburg, City of Largo, Manatee County, Hillsborough County, Pinellas County, Pasco County, FDEP, the Southwest Florida Water Management District, and the U.S. Environmental Protection Agency (Ex-officio). The Tampa Bay Nitrogen Management Consortium includes over 45 participating public and private partners — spanning counties and municipalities, state and federal agencies, port and utility interests, and phosphate, agricultural, and industrial partners.",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Overview</span>"
+    ]
+  },
+  {
+    "objectID": "overview.html#b.-existing-and-proposed-management-activities",
+    "href": "overview.html#b.-existing-and-proposed-management-activities",
+    "title": "Overview",
+    "section": "3.b. Existing and proposed management activities:",
+    "text": "3.b. Existing and proposed management activities:\n2027 RA Update: Consortium participants document completed and planned TN load-reduction projects in the online Tampa Bay Action Plan Database (https://apdb.tbep.org). Corrective-action and restoration projects implemented over 2022–2026 are summarized in the Summary chapter (Section 5).",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Overview</span>"
+    ]
+  },
+  {
+    "objectID": "overview.html#c.-geographic-scope-of-any-proposed-management-activity",
+    "href": "overview.html#c.-geographic-scope-of-any-proposed-management-activity",
+    "title": "Overview",
+    "section": "3.c. Geographic scope of any proposed management activity:",
+    "text": "3.c. Geographic scope of any proposed management activity:\n2027 RA Update: No change. The NMC Action Plan projects are located throughout the Tampa Bay watershed.",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Overview</span>"
+    ]
+  },
+  {
+    "objectID": "overview.html#d.-estimated-pollutant-load-reduction-anticipated-from-each-activity",
+    "href": "overview.html#d.-estimated-pollutant-load-reduction-anticipated-from-each-activity",
+    "title": "Overview",
+    "section": "3.d. Estimated Pollutant Load Reduction Anticipated from each activity:",
+    "text": "3.d. Estimated Pollutant Load Reduction Anticipated from each activity:\n2027 RA Update: Based on projects implemented over 2022–2026, cumulatively an additional 33.1 tons/yr of TN has been precluded from entering Tampa Bay (Table 7). Approximately 106.8 tons/yr of TN is estimated to be precluded after 2026 (Tables 8 & 9).",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Overview</span>"
+    ]
+  },
+  {
+    "objectID": "overview.html#e.-written-agreements-committing-partners-to-actions",
+    "href": "overview.html#e.-written-agreements-committing-partners-to-actions",
+    "title": "Overview",
+    "section": "3.e. Written agreements committing partners to actions:",
+    "text": "3.e. Written agreements committing partners to actions:\n2027 RA Update: The Tampa Bay Nitrogen Management Consortium gave consensus approval (with no objections) at their 2027 meeting to submit this document to FDEP as the 2027 RA Update for Tampa Bay. Participation status, meeting notes, presentations, and decision memos are at https://tbep.org/our-work/boards-committees/nitrogen-management-consortium/.",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Overview</span>"
+    ]
+  },
+  {
+    "objectID": "overview.html#f.-how-will-future-growth-and-new-sources-be-addressed",
+    "href": "overview.html#f.-how-will-future-growth-and-new-sources-be-addressed",
+    "title": "Overview",
+    "section": "3.f. How will future growth and new sources be addressed:",
+    "text": "3.f. How will future growth and new sources be addressed:\n2027 RA Update: Consistent with prior RA approvals and the 2009 RA Addendum, allocations to all TN loading sources are formalized and cumulatively capped at the federally-recognized TMDL for each bay segment. Reviews of interim, new, and transferred sources led to formal NMC concurrence of allocations assigned to each entity for the 2027–2031 RA implementation period (Tables 10–14), remaining within the TMDL limits.",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Overview</span>"
+    ]
+  },
+  {
+    "objectID": "overview.html#g.-confirmed-sources-of-funding",
+    "href": "overview.html#g.-confirmed-sources-of-funding",
+    "title": "Overview",
+    "section": "3.g. Confirmed sources of funding:",
+    "text": "3.g. Confirmed sources of funding:\n2027 RA Update: No change. Consortium participants abide by recommended funding levels for the NMC’s process to deliver 5-year RA updates. Participants have planned investments of $137,428,003 to continue and implement projects listed in Tables 8 and 9.",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Overview</span>"
+    ]
+  },
+  {
+    "objectID": "overview.html#h.-implementation-schedule",
+    "href": "overview.html#h.-implementation-schedule",
+    "title": "Overview",
+    "section": "3.h. Implementation schedule:",
+    "text": "3.h. Implementation schedule:\n2027 RA Update: No change. Consortium participants continue to develop future load-reduction projects and document them in the online Tampa Bay Action Plan Database (https://apdb.tbep.org). Table 8 lists ongoing projects; Table 9 lists projects planned to be initiated/completed after 2026.",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Overview</span>"
+    ]
+  },
+  {
+    "objectID": "overview.html#i.-enforcement-programs-if-the-management-strategy-is-not-voluntary",
+    "href": "overview.html#i.-enforcement-programs-if-the-management-strategy-is-not-voluntary",
+    "title": "Overview",
+    "section": "3.i. Enforcement programs, if the management strategy is not voluntary:",
+    "text": "3.i. Enforcement programs, if the management strategy is not voluntary:\n2027 RA Update: No change. Participation in the Consortium remains voluntary, and NMC partners continue to encourage non-participating point and nonpoint sources to join. The allocation compliance assessment process (Section 2.a) continues during the 2027–2031 RA implementation period; an assessment of the 2022–2026 period is in Appendices 1–5. FDEP and other regulatory agencies continue to ensure permitted facilities meet all permit requirements through existing regulatory and enforcement programs.",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Overview</span>"
+    ]
+  },
+  {
+    "objectID": "provenance.html",
+    "href": "provenance.html",
+    "title": "Code & Data Provenance",
+    "section": "",
+    "text": "Code & data provenance\nEvery figure and table in this book is produced from the analysis code in tbep-tech/reasonable-assurance-analysis. The table below maps each deliverable to its source.\nTable 5.1\n\n\n\n\n\n\nDeliverable\nSource\nData object(s)\n\n\n\n\nFig 1 — Watershed LULC\nR/figs.R -&gt; current land use figure\ndata/lulc2023.RData, data/sgdat2024.RData, data/fluccslkup.RData\n\n\nFig 2 — Chlorophyll-a trends\nR/figs.R -&gt; annual chl means all segments\ndata/chldat.RData\n\n\nFig 6 — WBID attainment\nR/figs.R -&gt; wbid attainments\nFDEP Nutrients_305b x RA watershed\n\n\nFig 7 — TN load by source\ntbep-tech/load-estimates (external)\nload-estimates outputs\n\n\nFig 8 — Per-capita TN\nR/figs.R -&gt; tn lbs per year per person\ntotanndat (load-estimates), data/popdat.RData\n\n\nFig 9 — Delivery ratios\nR/figs.R -&gt; tn v hy all segs\ndata/allsegdat8526.RData -&gt; data/loadratios1985-2025.csv\n\n\nFig 10 — TN load vs. population\ntbep-tech/load-estimates (external)\nload-estimates outputs\n\n\nFigs 3 & 4 — Seagrass\nR/figs.R -&gt; seagrass coverage by bay segment\nSWFWMD Suncoast seagrass series\n\n\nTable 1 — Loading sources\ntbep-tech/load-estimates (external)\nload-estimates outputs\n\n\nAppendix 6 — Delivery ratios\nR/docs.R -&gt; 2027 RA Update\ndata/loadratios1985-2025.csv\n\n\nData assembly (all)\nR/dat_proc.R\nACS/tidycensus, chlorophyll, LULC, seagrass\n\n\nShared functions\nR/funcs.R\nshow_rathrplot(), raanlz_avedat(), dpsdiff_fun()\nFigures 1, 2, 3, 4, 6, 8, and 9 of the RA Update are generated in this repository; Figures 5, 7, 10, and 11 and the compliance / allocation tables are maintained in the RA Update document or the load-estimates pipeline.",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Code & Data Provenance</span>"
+    ]
+  },
+  {
+    "objectID": "provenance.html#pipeline-order",
+    "href": "provenance.html#pipeline-order",
+    "title": "Code & Data Provenance",
+    "section": "Pipeline order",
+    "text": "Pipeline order\nR/dat_proc.R      # assemble population, chlorophyll, LULC, seagrass, loading inputs -&gt; data/\n   |\n   +--&gt; R/figs.R  # Figures 1, 2, 4, 6, 8, 9 -&gt; figs/ ; writes data/loadratios1985-2025.csv\n   |\n   +--&gt; R/docs.R  # delivery-ratio table -&gt; docs/loadratiotab1985-2025.docx",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Code & Data Provenance</span>"
+    ]
+  },
+  {
+    "objectID": "provenance.html#external-dependencies",
+    "href": "provenance.html#external-dependencies",
+    "title": "Code & Data Provenance",
+    "section": "External dependencies",
+    "text": "External dependencies\n\ntbep-tech/load-estimates — annual TN/TP/hydrologic load estimates; Figures 7 & 10 and Table 1 source data\ntbeptools — thresholds, segment averaging, RA plotting helpers\nUS Census Bureau ACS (via tidycensus) — Tampa MSA population\nSWFWMD — land use / land cover and seagrass coverage mapping\nFDEP — 303(d)/305(b) impaired-waters assessment categories\n\n\nWeb companion to the 2027 Reasonable Assurance Update. Narrative text adapted from the 2027 RA Update document (2026 Q4 draft); figures and tables generated from tbep-tech/reasonable-assurance-analysis. Several figures in the source document still carry drafting placeholders (e.g., the final 2026 baywide seagrass acreage reconciliation); these should be reconciled against the final signed submittal.",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Code & Data Provenance</span>"
+    ]
+  },
+  {
+    "objectID": "summary.html",
+    "href": "summary.html",
+    "title": "Monitoring, Corrective Actions & Summary",
+    "section": "",
+    "text": "4. Procedures for Monitoring and Reporting Results",
+    "crumbs": [
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Monitoring, Corrective Actions & Summary</span>"
+    ]
+  },
+  {
+    "objectID": "summary.html#a.-a-description-of-the-water-quality-monitoring-program-to-be-implemented",
+    "href": "summary.html#a.-a-description-of-the-water-quality-monitoring-program-to-be-implemented",
+    "title": "Monitoring, Corrective Actions & Summary",
+    "section": "4.a. A description of the water quality monitoring program to be implemented",
+    "text": "4.a. A description of the water quality monitoring program to be implemented\n2027 RA Update: No change. Existing monitoring includes monthly ambient collections by the Environmental Protection Commission of Hillsborough County, Manatee County, and Pinellas County. Samples from over 100 stations baywide are collected and analyzed monthly. These regional programs are considered among the top in the nation. Additional research investments to understand Old Tampa Bay’s Pyrodinium bahamense bloom dynamics and internal nutrient fluxes have been made or are underway through Tampa Bay Environmental Restoration Fund (TBERF) grants.",
+    "crumbs": [
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Monitoring, Corrective Actions & Summary</span>"
+    ]
+  },
+  {
+    "objectID": "summary.html#b.-quality-assurancequality-control-elements-of-monitoring",
+    "href": "summary.html#b.-quality-assurancequality-control-elements-of-monitoring",
+    "title": "Monitoring, Corrective Actions & Summary",
+    "section": "4.b. Quality Assurance/Quality Control elements of monitoring",
+    "text": "4.b. Quality Assurance/Quality Control elements of monitoring\n2027 RA Update: No change. All county monitoring programs and laboratories have State-approved Quality Assurance Plans and comply with FDEP’s QA rule (Chapter 62-160), including FDEP-approved SOPs. All participating county laboratories are NELAC certified. Quarterly round-robin inter-laboratory comparisons are conducted by the Southwest Florida Regional Ambient Monitoring Program (SWFL RAMP).",
+    "crumbs": [
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Monitoring, Corrective Actions & Summary</span>"
+    ]
+  },
+  {
+    "objectID": "summary.html#c.-procedures-for-entering-all-appropriate-data-into-winstoret",
+    "href": "summary.html#c.-procedures-for-entering-all-appropriate-data-into-winstoret",
+    "title": "Monitoring, Corrective Actions & Summary",
+    "section": "4.c. Procedures for entering all appropriate data into WIN/STORET:",
+    "text": "4.c. Procedures for entering all appropriate data into WIN/STORET:\n2027 RA Update: No change. County programs comply with the latest WIN data-upload procedures developed by FDEP. Through the SWFL RAMP, all Tampa Bay water quality monitoring data providers upload data to WIN.",
+    "crumbs": [
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Monitoring, Corrective Actions & Summary</span>"
+    ]
+  },
+  {
+    "objectID": "summary.html#d.-responsible-monitoring-and-reporting-entity",
+    "href": "summary.html#d.-responsible-monitoring-and-reporting-entity",
+    "title": "Monitoring, Corrective Actions & Summary",
+    "section": "4.d. Responsible monitoring and reporting entity:",
+    "text": "4.d. Responsible monitoring and reporting entity:\n2027 RA Update: No change. The three entities identified in Section 4.a continue to collect water quality data. TBEP staff and the NMC’s technical support contractor assimilate and summarize the data annually to provide compliance assessment reports to FDEP. Reports for the 2022–2026 RA period are at https://tbep.org/our-work/boards-committees/nitrogen-management-consortium/.",
+    "crumbs": [
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Monitoring, Corrective Actions & Summary</span>"
+    ]
+  },
+  {
+    "objectID": "summary.html#e.-frequency-and-reporting-format-for-reporting-monitoring-results",
+    "href": "summary.html#e.-frequency-and-reporting-format-for-reporting-monitoring-results",
+    "title": "Monitoring, Corrective Actions & Summary",
+    "section": "4.e. Frequency and reporting format for reporting monitoring results:",
+    "text": "4.e. Frequency and reporting format for reporting monitoring results:\n2027 RA Update: No change. As part of this update, the TBEP and TBNMC funded development of estimated TN, TP, TSS, and BOD loads for the watershed over the 2022–2026 RA period (https://tbep.org/tampa-bay-nitrogen-loads/). The Consortium also updated a Screening Level Tool for Estimating Annual Hydrologic Loadings to Tampa Bay to assess annual compliance of hydrologically-adjusted allocations; these adjustment factors are reported annually within the NMC compliance assessment reports submitted to FDEP and EPA.",
+    "crumbs": [
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Monitoring, Corrective Actions & Summary</span>"
+    ]
+  },
+  {
+    "objectID": "summary.html#f.-frequency-and-format-for-reporting-on-the-implementation-of-all-proposed-management-activities",
+    "href": "summary.html#f.-frequency-and-format-for-reporting-on-the-implementation-of-all-proposed-management-activities",
+    "title": "Monitoring, Corrective Actions & Summary",
+    "section": "4.f. Frequency and format for reporting on the implementation of all proposed management activities:",
+    "text": "4.f. Frequency and format for reporting on the implementation of all proposed management activities:\n2027 RA Update: No change. Formal reporting of results and action-plan projects continues every 5 years. Annual assessment of bay water quality conditions continues during the 2027–2031 RA Implementation Period.",
+    "crumbs": [
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Monitoring, Corrective Actions & Summary</span>"
+    ]
+  },
+  {
+    "objectID": "summary.html#g.-methods-for-evaluating-progress-towards-goals",
+    "href": "summary.html#g.-methods-for-evaluating-progress-towards-goals",
+    "title": "Monitoring, Corrective Actions & Summary",
+    "section": "4.g. Methods for evaluating progress towards goals:",
+    "text": "4.g. Methods for evaluating progress towards goals:\n2027 RA Update: No change. Formal reporting of chlorophyll-a threshold compliance continues annually and integrates new seagrass acreage estimates or trends. If exceedances occur in two consecutive years in any bay segment, additional assessment steps are required. Additionally, the TBNMC re-assessed the assimilative capacity of the Old Tampa Bay segment over the 2022–2026 RA implementation period; revisions to bay-segment load targets, entity allocations, and numeric nutrient criteria were not recommended by the NMC, with FDEP concurring on Mar. 31, 2026 that additional projects and research be pursued in Old Tampa Bay to maintain its reasonable assurance determination.",
+    "crumbs": [
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Monitoring, Corrective Actions & Summary</span>"
+    ]
+  }
+]
