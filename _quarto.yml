@@ -5,9 +5,9 @@ project:
   output-dir: docs
 
 book:
-  title: "2027 Reasonable Assurance Plan Update"
-  subtitle: "Tampa Bay Nutrient Management Strategy"
-  description: "Web companion to the 2027 Tampa Bay Reasonable Assurance Plan Update, prepared for the Florida Department of Environmental Protection and US Environmental Protection Agency."
+  title: "Tampa Bay Nutrient Management Strategy"
+  subtitle: "2027 Reasonable Assurance Update"
+  description: "Web companion to the Tampa Bay Nutrient Management Strategy 2027 Reasonable Assurance Update, prepared for the Florida Department of Environmental Protection."
   site-url: https://tbep-tech.github.io/reasonable-assurance-analysis/
   repo-url: https://github.com/tbep-tech/reasonable-assurance-analysis
   repo-actions: [source, issue]
@@ -16,17 +16,20 @@ book:
   chapters:
     - index.qmd
     - overview.qmd
+    - tables.qmd
     - summary.qmd
+    - appendices.qmd
     - provenance.qmd
   page-footer:
     border: true
     left: "Tampa Bay Estuary Program &amp; Tampa Bay Nitrogen Management Consortium"
-    center: "Prepared for the Florida Department of Environmental Protection and US Environmental Protection Agency"
+    center: "Prepared for the Florida Department of Environmental Protection"
     right: "Built with [Quarto](https://quarto.org) · [Source](https://github.com/tbep-tech/reasonable-assurance-analysis)"
 
 format:
   html:
     theme: cosmo
+    lightbox: true
     css: styles.css
     fontsize: 1.1em
     toc: true

@@ -6,9 +6,9 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="description" content="Web companion to the 2027 Tampa Bay Reasonable Assurance Plan Update, prepared for the Florida Department of Environmental Protection and US Environmental Protection Agency.">
+<meta name="description" content="Web companion to the Tampa Bay Nutrient Management Strategy 2027 Reasonable Assurance Update, prepared for the Florida Department of Environmental Protection.">
 
-<title>Code &amp; Data Provenance – 2027 Reasonable Assurance Plan Update</title>
+<title>Code &amp; Data Provenance – Tampa Bay Nutrient Management Strategy</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -34,7 +34,7 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./summary.html" rel="prev">
+<link href="./appendices.html" rel="prev">
 <script src="site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
@@ -101,7 +101,7 @@ ul.task-list li input[type="checkbox"] {
   <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
     <div class="pt-lg-2 mt-2 text-left sidebar-header">
     <div class="sidebar-title mb-0 py-0">
-      <a href="./">2027 Reasonable Assurance Plan Update</a> 
+      <a href="./">Tampa Bay Nutrient Management Strategy</a> 
         <div class="sidebar-tools-main">
     <a href="https://github.com/tbep-tech/reasonable-assurance-analysis" title="Source Code" class="quarto-navigation-tool px-1" aria-label="Source Code"><i class="bi bi-github"></i></a>
   <a href="" class="quarto-reader-toggle quarto-navigation-tool px-1" onclick="window.quartoToggleReader(); return false;" title="Toggle reader mode">
@@ -121,7 +121,7 @@ ul.task-list li input[type="checkbox"] {
     <ul class="list-unstyled mt-1">
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./index.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">2027 Reasonable Assurance Plan Update</span></a>
+  <a href="./index.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Tampa Bay Nutrient Management Strategy</span></a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -131,7 +131,17 @@ ul.task-list li input[type="checkbox"] {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
+  <a href="./tables.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Action Plan &amp; Allocation Tables</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
   <a href="./summary.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Monitoring, Corrective Actions &amp; Summary</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./appendices.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Appendices 1–5 · Entity Load Assessments</span></a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -186,7 +196,7 @@ ul.task-list li input[type="checkbox"] {
 <div id="tbl-provenance" class="cell quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-tbl figure">
 <figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl quarto-uncaptioned" id="tbl-provenance-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Table&nbsp;5.1
+Table&nbsp;7.1
 </figcaption>
 <div aria-describedby="tbl-provenance-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <div class="cell-output-display">
@@ -266,7 +276,8 @@ Table&nbsp;5.1
 </figure>
 </div>
 </div>
-<p>Figures 1, 2, 3, 4, 6, 8, and 9 of the RA Update are generated in this repository; Figures 5, 7, 10, and 11 and the compliance / allocation tables are maintained in the RA Update document or the <code>load-estimates</code> pipeline.</p>
+<p>Figures 1, 4, 6, 8, and 9 are generated in this repository. Figure 2 is generated here (<code>annual chl means all segments</code>) and also appears reproduced from the submitted document. Figures 3, 5, 7, and 10 are reproduced as images from the submitted 2027 RA Update.</p>
+<p>The compliance <strong>Tables 2–6</strong> are rendered natively (<code>flextable</code>) in the <em>Overview</em> chapter from the final RA Update values. <strong>Appendices 1–5</strong> are rendered natively from per-segment CSVs in <code>data/</code> (<code>appendix1_otb.csv</code> … <code>appendix5_rltb.csv</code>), extracted from the TBEP <a href="https://github.com/tbep-tech/load-reporting"><code>load-reporting</code></a> “Assessment” tables (<code>drafttables.qmd</code> → <code>show_aaassess()</code>, <code>data/aa2225.RData</code>), covering <strong>2022–2025</strong> (matching the final submittal period). The Action Plan / allocation <strong>Tables 7–14</strong> are reproduced as images to preserve exact entity names and allocation figures; their data come from the <a href="https://github.com/tbep-tech/load-estimates"><code>tbep-tech/load-estimates</code></a> pipeline, the <a href="https://apdb.tbep.org">Tampa Bay Action Plan Database</a>, and the entity-load workbooks. Figure 11 (chlorophyll-<em>a</em> attainment grid) remains document-maintained.</p>
 <section id="pipeline-order" class="level2">
 <h2 class="anchored" data-anchor-id="pipeline-order">Pipeline order</h2>
 <pre><code>R/dat_proc.R      # assemble population, chlorophyll, LULC, seagrass, loading inputs -&gt; data/
@@ -695,8 +706,8 @@ Table&nbsp;5.1
   </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="./summary.html" class="pagination-link" aria-label="Monitoring, Corrective Actions &amp; Summary">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-title">Monitoring, Corrective Actions &amp; Summary</span></span>
+      <a href="./appendices.html" class="pagination-link" aria-label="Appendices 1–5 · Entity Load Assessments">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-title">Appendices 1–5 · Entity Load Assessments</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
@@ -709,7 +720,7 @@ Table&nbsp;5.1
 <p>Tampa Bay Estuary Program &amp; Tampa Bay Nitrogen Management Consortium</p>
 </div>   
     <div class="nav-footer-center">
-<p>Prepared for the Florida Department of Environmental Protection and US Environmental Protection Agency</p>
+<p>Prepared for the Florida Department of Environmental Protection</p>
 <div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/tbep-tech/reasonable-assurance-analysis/blob/main/provenance.qmd" class="toc-action"><i class="bi bi-github"></i>View source</a></li><li><a href="https://github.com/tbep-tech/reasonable-assurance-analysis/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div>
     <div class="nav-footer-right">
 <p>Built with <a href="https://quarto.org">Quarto</a> · <a href="https://github.com/tbep-tech/reasonable-assurance-analysis">Source</a></p>

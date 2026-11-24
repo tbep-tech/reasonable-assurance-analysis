@@ -1,0 +1,100 @@
+Entity,Facility,Alloc_pct,Alloc_tons,Effective_load_tn,Status
+Alafia Preserve,MS4,0.06%,0.6,0.5,Within allocation
+Alpha/Owens Corning,Alpha/Owens Corning,0.10%,1.0,0.0,Within allocation
+Bloomingdale,MS4,0.00%,0.0,0.2,Exceeds allocation
+Brewster Phosphogypsum,Brewster Phosphogypsum,0.10%,1.0,1.0,Within allocation
+Busch Gardens,Busch Gardens,0.00%,1.0,6.5,Exceeds allocation
+City of Lakeland,City of Lakeland (end of pipe),,20.0,14.6,Within allocation
+City of Lakeland,City of Lakeland (reuse),,0.2,0.0,Within allocation
+City of Lakeland,MS4,1.05%,10.9,11.0,Exceeds allocation
+City of Lakeland,Total,,31.1,25.6,Within allocation
+City of Mulberry,City of Mulberry (end of pipe),,2.4,1.4,Within allocation
+City of Mulberry,MS4,0.20%,2.1,2.2,Exceeds allocation
+City of Mulberry,Total,,4.5,3.5,Within allocation
+City of Plant City,Plant City WRF (end of pipe),,9.5,4.1,Within allocation
+City of Plant City,Plant City WRF (reuse),,1.0,0.9,Within allocation
+City of Plant City,MS4,0.88%,9.2,8.2,Within allocation
+City of Plant City,Total,,19.7,13.2,Within allocation
+City of San Antonio,MS4,0.03%,0.3,0.1,Within allocation
+City of Tampa,Howard F. Curren (end of pipe),,212.2,247.3,Exceeds allocation
+City of Tampa,Howard F. Curren (reuse),,1.0,4.8,Exceeds allocation
+City of Tampa,MS4,4.80%,50.0,62.4,Exceeds allocation
+City of Tampa,Total,,263.2,314.5,Exceeds allocation
+City of Temple Terrace,MS4,0.20%,2.1,0.9,Within allocation
+City of Zephyrhills,City of Zephyrhills WWTF (reuse),,3.0,0.9,Within allocation
+City of Zephyrhills,MS4,0.16%,1.6,0.8,Within allocation
+City of Zephyrhills,Total,,4.6,1.7,Within allocation
+Coronet,Coronet Industries,0.45%,4.7,4.1,Within allocation
+CSX,CSX - Rockport Newport,0.72%,6.0,2.8,Within allocation
+CSX,CSX Winston Yard,,3.0,0.0,Within allocation
+CSX,Newport (Material Losses),,5.6,0.9,Within allocation
+CSX,Rockport (Material Losses),,5.6,0.5,Within allocation
+CSX,Total,,20.3,4.2,Within allocation
+Donaldson Knoll,MS4,0.01%,0.1,0.1,Within allocation
+Eagle Ridge,MS4,0.07%,0.7,0.6,Within allocation
+Estech Agricola,Estech Agricola,0.25%,2.6,1.6,Within allocation
+Exxon Mobil,Exxon Mobil,0.16%,1.7,0.0,Within allocation
+Hillsborough County,Falkenburg AWTP (end of pipe),,15.2,17.3,Exceeds allocation
+Hillsborough County,Pebble Creek AWTP (end of pipe),,0.3,0.0,Within allocation
+Hillsborough County,South County Regional WWTP (end of pipe),,1.8,1.0,Within allocation
+Hillsborough County,Valrico AWTP (end of pipe),,5.6,1.1,Within allocation
+Hillsborough County,Falkenburg AWTP (reuse),,2.8,1.4,Within allocation
+Hillsborough County,Pebble Creek AWTP (reuse),,0.1,0.0,Within allocation
+Hillsborough County,Valrico AWTP (reuse),,5.0,16.4,Exceeds allocation
+Hillsborough County,MS4,22.60%,235.6,193.8,Within allocation
+Hillsborough County,Total,,266.5,231.0,Within allocation
+Kerry,Kerry I and F,,1.8,0.6,Within allocation
+Kinder Morgan,Kinder Morgan Hartford Terminal,,25.0,14.6,Within allocation
+Kinder Morgan,Kinder Morgan Port Sutton,,25.0,14.6,Within allocation
+Kinder Morgan,Kinder Morgan Tampaplex,,25.0,14.6,Within allocation
+Kinder Morgan,Kinder Morgan Port Sutton (Material Losses),,1.8,0.2,Within allocation
+Kinder Morgan,Kinder Morgan Tampaplex (Material Losses),,3.4,0.1,Within allocation
+Kinder Morgan,Total,,30.2,14.8,Within allocation
+Lake St. Charles,MS4,0.04%,0.4,0.5,Exceeds allocation
+Live Oak I,MS4,0.02%,0.2,0.1,Within allocation
+Live Oak II,MS4,0.01%,0.1,0.1,Within allocation
+Lowry Park Zoo,Lowry Park Zoo,,1.0,0.2,Within allocation
+MacDill Air Force Base,MS4,0.07%,0.7,1.1,Exceeds allocation
+Magnolia Park,MS4,0.00%,0.1,0.6,Exceeds allocation
+Mosaic,Hopewell,12.03%,124.1,,Exceeds allocation
+Mosaic,Kingsford,12.03%,124.1,,Exceeds allocation
+Mosaic,Mosaic - Bartow,12.03%,124.1,6.6,Within allocation
+Mosaic,Mosaic - Black Point,12.03%,124.1,1.4,Within allocation
+Mosaic,Mosaic - Bonnie,12.03%,124.1,8.5,Within allocation
+Mosaic,Mosaic - Ft. Lonesome,12.03%,124.1,6.8,Within allocation
+Mosaic,Mosaic - Green Bay,12.03%,124.1,10.2,Within allocation
+Mosaic,Mosaic - Hookers Prairie,12.03%,124.1,0.0,Within allocation
+Mosaic,Mosaic - Mulberry Phospho Stack,12.03%,124.1,2.6,Within allocation
+Mosaic,Mosaic - Mulberry Plant,12.03%,124.1,0.1,Within allocation
+Mosaic,Mosaic - New Wales Chemical Plant,12.03%,124.1,9.8,Within allocation
+Mosaic,Mosaic - Nichols Mine,12.03%,124.1,0.4,Within allocation
+Mosaic,Mosaic - Plant City,12.03%,124.1,11.1,Within allocation
+Mosaic,Mosaic - Port Sutton,12.03%,124.1,3.3,Within allocation
+Mosaic,Mosaic - Riverview,12.03%,124.1,2.0,Within allocation
+Mosaic,Mosaic - Riverview Stack Closure,12.03%,124.1,0.0,Within allocation
+Mosaic,Mosaic - South Pierce,12.03%,124.1,6.2,Within allocation
+Mosaic,Mosaic - Tampa Ammonia Terminal,12.03%,124.1,0.0,Within allocation
+Mosaic,Mosaic - Tampa Marine Terminal,12.03%,124.1,0.3,Within allocation
+Mosaic,Big Bend (Material Losses),,9.9,2.7,Within allocation
+Mosaic,Riverview (Material Losses),,9.9,2.7,Within allocation
+Mosaic,Tampa Marine (Material Losses),,9.9,2.7,Within allocation
+Mosaic,Total,,134.0,71.9,Within allocation
+Palm River,MS4,0.00%,0.0,0.1,Exceeds allocation
+Panther Trace,MS4,0.03%,0.3,0.5,Exceeds allocation
+Panther Trace II,MS4,0.02%,0.2,0.6,Exceeds allocation
+Pasco County,Pasco Reuse (reuse),,5.8,2.9,Within allocation
+Pasco County,MS4,3.69%,38.4,18.2,Within allocation
+Pasco County,Total,,44.2,21.1,Within allocation
+Polk County,NW Regional WWTP (reuse),,0.6,0.3,Within allocation
+Polk County,Southwest Regional WWTF (reuse),,1.1,0.7,Within allocation
+Polk County,MS4,6.47%,67.5,65.2,Within allocation
+Polk County,Total,,69.3,66.2,Within allocation
+Rivercrest,MS4,0.03%,0.3,0.6,Exceeds allocation
+Spring Lake,MS4,0.01%,0.1,0.5,Exceeds allocation
+St. Leo,MS4,0.00%,0.0,0.0,Within allocation
+Stone Crest,MS4,0.00%,0.0,0.1,Exceeds allocation
+Stone Dairy Creek,MS4,0.00%,0.0,0.4,Exceeds allocation
+Stonelake Ranch,MS4,0.00%,0.0,0.1,Exceeds allocation
+Tampa Bay Water,Tampa Bay Water,,1.5,0.0,Within allocation
+TECO,TECO - Bayside (fka Gannon),0.07%,0.8,0.2,Within allocation
+Trademark Nitrogen,Trademark Nitrogen Corporation,0.00%,0.0,0.1,Exceeds allocation

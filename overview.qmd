@@ -24,17 +24,27 @@ that work cooperatively in a voluntary framework to maintain nitrogen loads supp
 restoration. In 2020, the TBEP and partners updated the Habitat Master Plan, adopting a goal of
 maintaining at least **40,000 acres** of seagrass baywide.
 
-Between 2022 and 2026, seagrass coverage increased by **1,426 acres baywide**, while the Old Tampa Bay
-segment continued to see losses. Baywide seagrass coverage was estimated at **31,563 acres in 2026**,
-remaining below the 40,000-acre protection and recovery goal for a second consecutive RA assessment
-period.
-
-![Figure 1. Tampa Bay watershed land use / land cover, from the 2023 SWFWMD LULC layer with the 2024 subtidal seagrass layer overlaid; FLUCCS codes reclassified into ten mapping categories.](figs/lulcmap.png){fig-alt="Land use and land cover map of the Tampa Bay watershed"}
+![Figure 1. Tampa Bay watershed land use / land cover (2023 SWFWMD LULC with 2024 subtidal seagrass overlay).](figs/lulcmap.png){fig-alt="Land use and land cover map of the Tampa Bay watershed"}
 
 ::: {.provenance}
-**Figure 1 source:** [`R/figs.R`](https://github.com/tbep-tech/reasonable-assurance-analysis/blob/main/R/figs.R)
-→ section *current land use figure* · **Data:** `data/lulc2023.RData`, `data/sgdat2024.RData`,
-`data/fluccslkup.RData`, `data/tbep2225.RData`
+**Figure 1:** [`R/figs.R`](https://github.com/tbep-tech/reasonable-assurance-analysis/blob/main/R/figs.R)
+→ *current land use figure* · generated from repository code.
+:::
+
+Between 2022 and 2026, seagrass coverage increased by **1,426 acres baywide**, while the Old Tampa Bay
+segment continued to see losses. Baywide seagrass coverage was estimated at **31,563 acres in 2026**
+(Figure 3), remaining below the 40,000-acre protection and recovery goal for a second consecutive RA
+assessment period. Historic changes by segment (Figure 4) show the long-term increase to the 2016
+baywide maximum; coverage increased in all segments during 2022–2026 except Old Tampa Bay.
+
+![Figure 3. Historic baywide seagrass acreage estimates relative to the 40,000-acre coverage goal (TBEP & SWFWMD; 2026 data pending).](figs/fig03_seagrass_baywide.png){fig-alt="Bar chart of baywide seagrass acreage 1950-2024 with coverage goal line"}
+
+![Figure 4. Historic seagrass acreage by bay segment (SWFWMD Suncoast seagrass mapping series).](figs/sgsegtrend.png){fig-alt="Small-multiple bar charts of seagrass coverage by bay segment"}
+
+::: {.provenance}
+**Figure 3:** reproduced from the 2027 RA Update (TBEP & SWFWMD). · **Figure 4:**
+[`R/figs.R`](https://github.com/tbep-tech/reasonable-assurance-analysis/blob/main/R/figs.R)
+→ *seagrass coverage by bay segment* · generated from repository code.
 :::
 
 ## 1.a. Name:
@@ -46,6 +56,12 @@ portions of the Manatee River and southern Boca Ciega Bay (Figure 5). The Old Ta
 Hillsborough Bay, Middle Tampa Bay and Lower Tampa Bay segments are identical to FDEP's established
 estuary nutrient regions; the Remainder of Lower Tampa Bay RA Segment includes FDEP's Boca Ciega Bay
 South, Terra Ceia Bay, and Manatee River Estuary nutrient regions (62-302.532(1), F.A.C.).
+
+![Figure 5. TBEP RA bay segment boundaries in relation to FDEP-defined WBIDs (IWR 64) contained in the major bay segment boundaries.](figs/fig05_ra_wbid_map.png){fig-alt="Map of TBEP RA bay segment boundaries overlaid with FDEP WBIDs"}
+
+::: {.provenance}
+**Figure 5:** reproduced from the 2027 RA Update (boundary map, 2009 RA Addendum basis).
+:::
 
 ## 1.b. Location:
 
@@ -76,8 +92,8 @@ harvesting areas in Tampa Bay.
 ![Figure 6. FDEP surface-water quality assessment categories for WBIDs intersecting the Tampa Bay watershed.](figs/wbidattainment.png){fig-alt="Map of FDEP water quality assessment categories for Tampa Bay WBIDs"}
 
 ::: {.provenance}
-**Figure 6 source:** [`R/figs.R`](https://github.com/tbep-tech/reasonable-assurance-analysis/blob/main/R/figs.R)
-→ section *wbid attainments* · **Data:** FDEP `Nutrients_305b` layer × RA segment watershed
+**Figure 6:** [`R/figs.R`](https://github.com/tbep-tech/reasonable-assurance-analysis/blob/main/R/figs.R)
+→ *wbid attainments* · generated from repository code.
 :::
 
 ## 1.g. Area of the waterbody:
@@ -114,27 +130,21 @@ sources for each 5-year Tampa Bay RA period; the final column is the current 202
 | Industrial Fertilizer Material Losses | 0.7 | 0.5 | 0.4 | 0.2 | 0.2 | **0.1** |
 | Groundwater and Springs | 3.8 | 2.4 | 1.5 | 1.0 | 4.6 | **4.8** |
 
-::: {.callout-note appearance="simple"}
-Figure 7 (stacked-area TN load by major source category for each RA segment, 1985–2026, with TMDL
-reference lines) and Figure 10 (hydrologically-normalized TN load vs. metropolitan population) are
-generated in the [`tbep-tech/load-estimates`](https://github.com/tbep-tech/load-estimates) pipeline
-and embedded directly in the RA Update document.
-:::
+![Figure 7. Total nitrogen loads to each Reasonable Assurance segment over 1985–2026, partitioned into the major source categories (AD, green; DPS, blue; GWS, orange; IPS, red; NPS, yellow). Dotted lines represent the federally-recognized TMDLs.](figs/fig07_tn_by_source.svg){fig-alt="Stacked-area charts of TN load by source category for each bay segment"}
 
-![Figure 8. Per-capita TN load (lbs · person⁻¹ · yr⁻¹) entering Tampa Bay, from the 1976 "worst case" (9,904 tons TN; population 1,358,245) through the current 2021–2025 period.](figs/tnpercapita.png){fig-alt="Bar chart of per-capita TN load by period"}
+![Figure 8. Per-capita TN load entering Tampa Bay by period, from the 1976 worst case through 2021–2025.](figs/fig08_tnpercapita.png){fig-alt="Bar chart of per-capita TN load by period"}
 
-::: {.provenance}
-**Figure 8 source:** [`R/figs.R`](https://github.com/tbep-tech/reasonable-assurance-analysis/blob/main/R/figs.R)
-→ section *tn lbs per year per person* · **Data:** `totanndat` (load-estimates), `data/popdat.RData`
-:::
+![Figure 9. TN (a) and TP (b) delivery ratios by bay segment, 1985–2025, with 1992–1994 numeric-nutrient-criteria reference lines.](figs/fig09_loadratios.png){fig-alt="Small-multiple time series of TN and TP delivery ratios by bay segment"}
 
-![Figure 9. TN (panel a) and TP (panel b) delivery ratios — load per unit water (tons per million m³) — for each bay segment, 1985–2025. The dashed line is the 1992–1994 numeric nutrient criterion for that FDEP Estuary Nutrient Region. Every segment's TN delivery ratio remains at or below its criterion.](figs/loadratios.png){fig-alt="Small-multiple time series of TN and TP delivery ratios by bay segment"}
+![Figure 10. Trend in total nitrogen vs. hydrology load to Tampa Bay relative to population increases in the Tampa Bay metropolitan area.](figs/fig10_tn_vs_pop.png){fig-alt="Population bars with TN-to-hydrology ratio line, 1985-2025"}
 
 ::: {.provenance}
-**Figure 9 source:** [`R/figs.R`](https://github.com/tbep-tech/reasonable-assurance-analysis/blob/main/R/figs.R)
-→ section *tn v hy all segs* · **Data:** `data/allsegdat8526.RData` →
-[`data/loadratios1985-2025.csv`](https://github.com/tbep-tech/reasonable-assurance-analysis/blob/main/data/loadratios1985-2025.csv)
-· The tabular form is **Appendix 6** in the *Summary* chapter.
+**Table 1, Figures 7 & 10:** TN loading estimates from
+[`tbep-tech/load-estimates`](https://github.com/tbep-tech/load-estimates); Figures 7 & 10 reproduced
+from the 2027 RA Update. · **Figure 8:** [`R/figs.R`](https://github.com/tbep-tech/reasonable-assurance-analysis/blob/main/R/figs.R)
+→ *tn lbs per year per person*. · **Figure 9:** `R/figs.R` → *tn v hy all segs*
+(→ [`data/loadratios1985-2025.csv`](https://github.com/tbep-tech/reasonable-assurance-analysis/blob/main/data/loadratios1985-2025.csv);
+tabular form in *Summary*, Appendix 6).
 :::
 
 # 2. Description of Water Quality or Aquatic Ecological Goals
@@ -146,9 +156,7 @@ and embedded directly in the RA Update document.
 major bay segment on an annual-average basis is the primary metric for assessing progress toward the
 seagrass restoration goal. A secondary goal — maintaining hydrologically-normalized total nitrogen
 loads to each major bay segment — was adopted with the 2009 RA Addendum and later codified as the
-numeric nutrient criteria for the Tampa Bay estuarine nutrient regions (62-302.532(1), F.A.C.). A
-compliance assessment framework was established and has been used for all subsequent RA updates (2009
-RA Addendum, Section VIII).
+numeric nutrient criteria for the Tampa Bay estuarine nutrient regions (62-302.532(1), F.A.C.).
 
 ## 2.b. Averaging period:
 
@@ -158,13 +166,12 @@ in 2012 as NNC. Assessment methods are documented in the
 [`tbeptools` introduction](https://tbep-tech.github.io/tbeptools/articles/intro.html); source code is
 at [`tbep-tech/wq-dash`](https://github.com/tbep-tech/wq-dash).
 
-![Figure 2. Annual-average chlorophyll-*a* (µg·L⁻¹) for each of the seven FDEP estuarine nutrient regions, 1975–2025. The dotted line in each panel is the FDEP large-exceedance ("+2 se") threshold.](figs/chltrends.png){fig-alt="Small-multiple time series of chlorophyll-a by bay segment"}
+![Figure 2. Annual-average chlorophyll-*a* concentration in each bay segment, 1974–2025. Dashed lines represent the FDEP chlorophyll-*a* thresholds (numeric nutrient criteria). Grey shading indicates the 2022–2026 RA period. Data source: EPCHC, Pinellas County, and Manatee County.](figs/fig02_chltrends_thru2025.png){fig-alt="Small-multiple time series of chlorophyll-a by bay segment through 2025"}
 
 ::: {.provenance}
-**Figure 2 source:** [`R/figs.R`](https://github.com/tbep-tech/reasonable-assurance-analysis/blob/main/R/figs.R)
-→ section *annual chl means all segments* · **Functions:** `show_rathrplot()`, `raanlz_avedat()` in
-[`R/funcs.R`](https://github.com/tbep-tech/reasonable-assurance-analysis/blob/main/R/funcs.R) ·
-**Data:** `data/chldat.RData`
+**Figure 2:** reproduced from the 2027 RA Update; equivalently generated by
+[`R/figs.R`](https://github.com/tbep-tech/reasonable-assurance-analysis/blob/main/R/figs.R)
+→ *annual chl means all segments* (`show_rathrplot()`, `raanlz_avedat()`), from `data/chldat.RData`.
 :::
 
 ## 2.c. How will goals result in restoration of impaired designated uses:
@@ -178,16 +185,97 @@ Bay.
 
 **2027 RA Update:** No changes to the TBEP's annual management Decision Matrix process, the Tampa Bay
 NMC nutrient management strategy, or the allocation compliance assessment framework. Results of the
-bay-segment-specific compliance assessment over the 2022–2026 RA period are described in Figure 11 and
-Tables 2–6. **For the 2022–2026 RA period, no annual exceedances** of the chlorophyll-*a* thresholds
-nor of hydrologically-normalized total nitrogen loads were observed, and the TN and TP numeric
-nutrient criteria (Figure 9) were not exceeded.
+bay-segment-specific compliance assessment over the 2022–2026 RA period are described in Tables 2–6.
+**For the 2022–2026 RA period, no annual exceedances** of the chlorophyll-*a* thresholds nor of
+hydrologically-normalized total nitrogen loads were observed, and the TN and TP numeric nutrient
+criteria (Figure 9) were not exceeded. (2026 outcomes are shown as *pending* until the period closes.)
 
-![Figures 3 & 4. Biennial seagrass coverage (× 1,000 acres) by bay segment from the SWFWMD Suncoast seagrass mapping series; 2022–2026 saw increases in all segments except Old Tampa Bay.](figs/sgsegtrend.png){fig-alt="Small-multiple bar charts of seagrass coverage by bay segment"}
+Green cells indicate a decision-point outcome consistent with reasonable assurance (threshold met /
+load below the TMDL); 2026 values are shown as *pending* until the RA period closes.
+
+```{r}
+#| label: ra-assessment-tables
+#| results: asis
+library(flextable)
+
+ra_steps <- function(tbl_no, seg, threshold, tmdl, a1, a3) {
+  df <- data.frame(
+    step = c(
+      paste0("NMC Action 1: Determine if observed chlorophyll-a exceeds FDEP threshold of ",
+             threshold, " ug/L"),
+      "NMC Action 2: Determine if any observed chlorophyll-a exceedances occurred for 2 consecutive years",
+      paste0("NMC Action 3: Determine if observed hydrologically-normalized total load exceeds ",
+             "federally-recognized TMDL of ", tmdl, " tons/year"),
+      paste0("NMC Actions 4-5: Determine if any entity/source/facility specific exceedances of ",
+             "5-yr average allocation occurred during implementation period")),
+    y1 = c(a1[1], "No", a3[1], ""), y2 = c(a1[2], "No", a3[2], ""),
+    y3 = c(a1[3], "No", a3[3], ""), y4 = c(a1[4], "No", a3[4], ""),
+    y5 = c(a1[5], "No", a3[5], ""),
+    outcome = c("All years below threshold so far, not necessary for NMC Actions 2-5",
+                "All years met threshold, not necessary for NMC Actions 3-5",
+                "Not necessary due to observed water quality and seagrass conditions in the bay segment",
+                "Not necessary when chlorophyll-a threshold met"),
+    check.names = FALSE, stringsAsFactors = FALSE)
+
+  ft <- flextable(df)
+  ft <- set_header_labels(ft, step = "Bay Segment Reasonable Assurance Assessment Steps",
+                          y1 = "Year 1 (2022)", y2 = "Year 2 (2023)", y3 = "Year 3 (2024)",
+                          y4 = "Year 4 (2025)", y5 = "Year 5 (2026)", outcome = "OUTCOME")
+  ft <- add_header_row(ft, values = c("", "DATA USED TO ASSESS ANNUAL REASONABLE ASSURANCE", ""),
+                       colwidths = c(1, 5, 1))
+  # bay-segment name as a top header row spanning all columns
+  ft <- add_header_row(ft, values = sub("^the ", "", seg), colwidths = ncol(df), top = TRUE)
+  ft <- merge_at(ft, i = 2:3, j = 1, part = "header")
+  ft <- merge_at(ft, i = 2:3, j = 7, part = "header")
+  ft <- merge_at(ft, i = 4, j = 2:6, part = "body")
+  ft <- bg(ft, bg = "#BDD7EE", part = "header")
+  ft <- bold(ft, i = 1, part = "header")
+  ft <- align(ft, i = 1, align = "center", part = "header")
+  for (r in 1:3) for (cc in 2:6) {
+    val <- df[r, cc]
+    ft <- bg(ft, i = r, j = cc,
+             bg = if (grepl("Pending", val)) "#E2EFDA" else "#A9D08E", part = "body")
+  }
+  ft <- align(ft, j = 2:6, align = "center", part = "all")
+  ft <- valign(ft, valign = "top", part = "body")
+  ft <- border_outer(ft); ft <- border_inner(ft)
+  ft <- fontsize(ft, size = 9, part = "all")
+  ft <- set_caption(ft, paste0("Table ", tbl_no,
+        ". Demonstration of reasonable assurance assessment steps for ", seg, "."))
+  ft <- set_table_properties(ft, layout = "autofit", width = 1)
+  ft
+}
+
+segs <- list(
+  list(2, "Table 2: Old Tampa Bay", "9.3", "486",
+       c("No (7.1)","No (6.2)","No (8.8)","No (6.6)","Pending (7.5)"),
+       c("No (359)","No (308)","No (435)","No (311)","No (Pending)")),
+  list(3, "Table 3: Hillsborough Bay", "15", "1451",
+       c("No (8.9)","No (6.9)","No (10.7)","No (10)","Pending (8.2)"),
+       c("No (1,138)","No (1,163)","No (1,281)","No (1,344)","No (Pending)")),
+  list(4, "Table 4: Middle Tampa Bay", "8.5", "799",
+       c("No (5)","No (3.7)","No (7.8)","No (5.5)","Pending (4.9)"),
+       c("No (564)","No (531)","No (587)","No (492)","No (Pending)")),
+  list(5, "Table 5: Lower Tampa Bay", "5.1", "349",
+       c("No (3.6)","No (2.6)","No (4.6)","No (3)","Pending (3.3)"),
+       c("No (186)","No (215)","No (148)","No (161)","No (Pending)")),
+  list(6, "Table 6: Remainder of Lower Tampa Bay", "5.1", "629",
+       c("No (3.6)","No (2.6)","No (4.6)","No (3)","Pending (3.3)"),
+       c("No (463)","No (424)","No (511)","No (421)","No (Pending)")))
+
+for (s in segs) {
+  ft <- ra_steps(s[[1]], s[[2]], s[[3]], s[[4]], s[[5]], s[[6]])
+  cat("\n\n")
+  flextable_to_rmd(ft)
+  cat("\n\n")
+}
+```
+
+
+![Figure 11. Attainment of adopted chlorophyll-*a* thresholds (grid, by year and bay segment) through 2025. Green indicates the annual-average threshold was met; red indicates it was not.](figs/fig11_attainment.png){fig-alt="Grid of annual chlorophyll-a threshold attainment by bay segment through 2025"}
 
 ::: {.provenance}
-**Figures 3 & 4 source:** [`R/figs.R`](https://github.com/tbep-tech/reasonable-assurance-analysis/blob/main/R/figs.R)
-→ section *seagrass coverage by bay segment* · **Data:** SWFWMD Suncoast seagrass series × seagrass segments
+**Figure 11:** chlorophyll-*a* attainment grid, TBEP (through 2025).
 :::
 
 # 3. Description of Proposed Management Actions to be Undertaken
@@ -204,8 +292,10 @@ federal agencies, port and utility interests, and phosphate, agricultural, and i
 ## 3.b. Existing and proposed management activities:
 
 **2027 RA Update:** Consortium participants document completed and planned TN load-reduction projects
-in the online Tampa Bay Action Plan Database (<https://apdb.tbep.org>). Corrective-action and
-restoration projects implemented over 2022–2026 are summarized in the *Summary* chapter (Section 5).
+in the online Tampa Bay Action Plan Database (<https://apdb.tbep.org>). Completed, ongoing, and future
+projects for the period are listed in **Tables 7–9** (see the *Action Plan & Allocation Tables*
+chapter). Corrective-action and restoration projects are summarized in the *Summary* chapter
+(Section 5).
 
 ## 3.c. Geographic scope of any proposed management activity:
 
@@ -230,8 +320,8 @@ Bay. Participation status, meeting notes, presentations, and decision memos are 
 **2027 RA Update:** Consistent with prior RA approvals and the 2009 RA Addendum, allocations to all TN
 loading sources are formalized and cumulatively capped at the federally-recognized TMDL for each bay
 segment. Reviews of interim, new, and transferred sources led to formal NMC concurrence of allocations
-assigned to each entity for the 2027–2031 RA implementation period (Tables 10–14), remaining within
-the TMDL limits.
+assigned to each entity for the 2027–2031 RA implementation period (**Tables 10–14**, in the *Action
+Plan & Allocation Tables* chapter), remaining within the TMDL limits.
 
 ## 3.g. Confirmed sources of funding:
 

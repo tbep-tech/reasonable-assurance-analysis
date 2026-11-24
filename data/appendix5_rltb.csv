@@ -1,0 +1,28 @@
+Entity,Facility,Alloc_pct,Alloc_tons,Effective_load_tn,Status
+City of Bradenton,City of Bradenton WRF (end of pipe),,18.6,23.2,Exceeds allocation
+City of Bradenton,City of Bradenton WRF (reuse),,0.6,9.9,Exceeds allocation
+City of Bradenton,MS4,1.82%,10.8,7.1,Within allocation
+City of Bradenton,Total,,30.1,40.3,Exceeds allocation
+City of Gulfport,MS4,0.37%,2.2,0.8,Within allocation
+City of Palmetto,City of Palmetto WWTF (end of pipe),,2.2,0.6,Within allocation
+City of Palmetto,City of Palmetto WWTF (reuse),,1.0,0.0,Within allocation
+City of Palmetto,MS4,0.77%,4.6,3.3,Within allocation
+City of Palmetto,Total,,7.7,3.9,Within allocation
+City of St. Petersburg,St Pete Facilities (reuse),,1.6,1.8,Exceeds allocation
+City of St. Petersburg,MS4,1.27%,7.5,3.7,Within allocation
+City of St. Petersburg,Total,,9.1,5.5,Within allocation
+City of St. Petersburg Beach,MS4,0.21%,1.2,0.6,Within allocation
+Greyhawk Landing,MS4,0.14%,0.8,0.7,Within allocation
+Harbourage at Braden River,MS4,0.00%,0.0,0.1,Exceeds allocation
+Heritage Harbour,MS4,0.14%,0.8,0.9,Exceeds allocation
+Heritage Harbour Marketplace,MS4,0.02%,0.1,0.1,Within allocation
+Lakewood Ranch,MS4,1.47%,8.7,6.3,Within allocation
+Lexington,MS4,0.02%,0.1,0.1,Within allocation
+Manatee County,Manatee County Southeast WRF (reuse),,2.7,16.1,Exceeds allocation
+Manatee County,MS4,21.95%,130.2,109.0,Within allocation
+Manatee County,Total,,132.9,125.1,Within allocation
+Pinellas County,MS4,0.18%,1.1,0.7,Within allocation
+Sarasota County,MS4,1.38%,8.2,4.8,Within allocation
+Tara,MS4,0.18%,1.1,0.7,Within allocation
+University Place,MS4,0.11%,0.6,0.4,Within allocation
+Waterlefe,MS4,0.10%,0.6,0.4,Within allocation

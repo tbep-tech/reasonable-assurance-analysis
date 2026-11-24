@@ -1,0 +1,10 @@
+Entity,Facility,Alloc_pct,Alloc_tons,Effective_load_tn,Status
+City of St. Petersburg,MS4,0.01%,0.0,0.0,Within allocation
+Hillsborough County,MS4,0.01%,0.0,-0.0,Within allocation
+Kinder Morgan,Kinder Morgan Port Manatee (Material Losses),,0.3,0.0,Within allocation
+Lexington,MS4,0.04%,0.1,0.1,Within allocation
+Manatee County,Manatee County North WRF (end of pipe),,0.0,0.0,Within allocation
+Manatee County,Manatee County North WRF (reuse),,3.9,5.2,Exceeds allocation
+Manatee County,MS4,7.81%,26.8,18.4,Within allocation
+Manatee County,Total,,30.7,23.7,Within allocation
+Piney Point Facility,HRK Piney Point,,0.9,1.5,Exceeds allocation

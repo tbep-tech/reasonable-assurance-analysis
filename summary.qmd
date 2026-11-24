@@ -99,8 +99,10 @@ Annual TN / TP delivery ratios (tons per million m³) for all eight nutrient reg
 the tabular companion to **Figure 9** (see *Overview*) and is built live from the repository data at
 render time.
 
+::: {.table-scroll}
+
 ```{r}
-#| label: tbl-delivery
+#| label: delivery-ratios
 library(dplyr)
 library(tidyr)
 library(knitr)
@@ -127,11 +129,12 @@ totab <- read.csv(here("data", "loadratios1985-2025.csv"), check.names = FALSE) 
 
 totab <- totab[, c("Year", seg_levels)]
 
-cat('<div class="table-scroll">\n')
-print(kable(totab, format = "html", align = c("l", rep("c", length(seg_levels))),
-            table.attr = 'class="table table-sm"'))
-cat('\n</div>')
+# Return the table as a knitr object so Quarto renders it natively
+# (avoids printing escaped HTML markup on the page).
+kable(totab, align = c("l", rep("c", length(seg_levels))))
 ```
+
+:::
 
 ::: {.provenance}
 **Source:** [`R/docs.R`](https://github.com/tbep-tech/reasonable-assurance-analysis/blob/main/R/docs.R)

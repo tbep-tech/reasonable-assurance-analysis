@@ -40,9 +40,16 @@ prov <- data.frame(
 kable(prov, format = "html", table.attr = 'class="table table-sm"')
 ```
 
-Figures 1, 2, 3, 4, 6, 8, and 9 of the RA Update are generated in this repository; Figures 5, 7, 10,
-and 11 and the compliance / allocation tables are maintained in the RA Update document or the
-`load-estimates` pipeline.
+Figures 1, 4, 6, 8, and 9 are generated in this repository. Figure 2 is generated here
+(`annual chl means all segments`) and also appears reproduced from the submitted document. Figures 3,
+5, 7, and 10 are reproduced as images from the submitted 2027 RA Update.
+
+The compliance **Tables 2–6** are rendered natively (`flextable`) in the *Overview* chapter from the
+final RA Update values. **Appendices 1–5** are rendered natively from per-segment CSVs in `data/` (`appendix1_otb.csv` … `appendix5_rltb.csv`), extracted from the TBEP [`load-reporting`](https://github.com/tbep-tech/load-reporting) "Assessment" tables (`drafttables.qmd` → `show_aaassess()`, `data/aa2225.RData`), covering **2022–2025** (matching the final submittal period). The Action Plan / allocation
+**Tables 7–14** are reproduced as images to preserve exact entity names and allocation figures; their
+data come from the [`tbep-tech/load-estimates`](https://github.com/tbep-tech/load-estimates) pipeline,
+the [Tampa Bay Action Plan Database](https://apdb.tbep.org), and the entity-load workbooks. Figure 11
+(chlorophyll-*a* attainment grid) remains document-maintained.
 
 ## Pipeline order
 

@@ -1,0 +1,6 @@
+appendix,segment,slug,tmdl,n_rows,n_exceed
+1,Old Tampa Bay,appendix1_otb,486,45,10
+2,Hillsborough Bay,appendix2_hb,1451,99,24
+3,Middle Tampa Bay,appendix3_mtb,799,15,6
+4,Lower Tampa Bay,appendix4_ltb,349,9,2
+5,Remainder of Lower Tampa Bay,appendix5_rltb,629,27,7
