@@ -5,9 +5,9 @@ project:
   output-dir: docs
 
 book:
-  title: "Tampa Bay Nutrient Management Strategy"
-  subtitle: "2027 Reasonable Assurance Update"
-  description: "Web companion to the Tampa Bay Nutrient Management Strategy 2027 Reasonable Assurance Update, prepared for the Florida Department of Environmental Protection."
+  title: "2027 Reasonable Assurance Update"
+  #subtitle: "Tampa Bay Nutrient Management Strategy"
+  #description: "Web companion to the Tampa Bay Nutrient Management Strategy 2027 Reasonable Assurance Update, prepared for the Florida Department of Environmental Protection."
   site-url: https://tbep-tech.github.io/reasonable-assurance-analysis/
   repo-url: https://github.com/tbep-tech/reasonable-assurance-analysis
   repo-actions: [source, issue]

@@ -14,7 +14,7 @@ Subsequent to the 2002 effort, both a [2007 Reasonable Assurance Update](https:/
 The format of this 2027 Reasonable Assurance (RA) Update follows that provided in the draft “Guidance for Development of Documentation to Provide Reasonable Assurance that Proposed Pollution Control Mechanisms will Result in the Restoration of Designated Uses in Impaired Waters” provided by FDEP in February 2002. For each element, updated 2027 Reasonable Assurance documentation is integrated with any relevant documentation detailed in the [2002](https://drive.google.com/drive/folders/1r7iA_H4f9fHMJq8dhNrqY5WfEaVT_2FX), [2007](https://drive.google.com/drive/folders/1JNLawapeAhxnMzHGZQuxJuuoCro6CHEc), [2009 Addendum](https://drive.google.com/drive/folders/1YMxNMXVOpStaJolzIgjW6-0CQZbPWQqw), [2012](https://tbep.org/reasonable-assurance-plans-updates-2012/), [2017](https://tbep.org/reasonable-assurance-plans-updates-2017/) and [2022 RA](https://drive.google.com/file/d/18HHMx4U6vHNrFyepEFuoTJ_sEKyTA_gu/view?usp=drive_link) submittals.
 
 ## Additional Information {.unnumbered}
-This book is the web companion to the **2027 Reasonable Assurance (RA) Update** prepared by the Tampa
+This book is the web companion to the **[2027 Reasonable Assurance (RA) Update](https://docs.google.com/document/d/1QXoC0cP8zpiCuWNnEOQ8_kvxuxftGfHDny0RZ9FPPaM/edit?usp=sharing)** prepared by the Tampa
 Bay Estuary Program (TBEP) and the Tampa Bay Nitrogen Management Consortium (NMC) for the Florida
 Department of Environmental Protection (FDEP). It presents the narrative, figures, and tables of the
 RA Update for the **2022–2026 reporting period**, with each figure and table linked back to the
