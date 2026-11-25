@@ -142,3 +142,7 @@ p {
   text-align: justify !important;
   hyphens: auto;
 }
+
+footer {
+  text-align: center;
+  }
