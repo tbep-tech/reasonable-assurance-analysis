@@ -1,5 +1,5 @@
 ---
-title: "Appendices 1–5: Entity Load Assessments"
+title: "Appendices 1–6: Entity Load & Bay Segment NNC Assessments"
 ---
 Appendices 1–5 present the per-entity, per-facility allocation assessment for each bay segment over
 the 2022–2025 Reasonable Assurance period. For each entity the table lists the facility (point-source
@@ -75,4 +75,64 @@ Addendum §IX.D). All segments met their chlorophyll-*a* thresholds over 2022–
 **Appendices 1–5:** TBEP [`load-reporting`](https://github.com/tbep-tech/load-reporting) "Assessment"
 outputs (`drafttables.qmd` → `show_aaassess()`, `data/aa2225.RData`), 2022–2025. Allocation percentages
 and TMDL-equivalent loads correspond to **Tables 10–14** (*Action Plan & Allocation Tables* chapter).
+:::
+
+# Appendix 6. TN and TP delivery ratios, 1985–2025
+
+Annual TN / TP delivery ratios (tons per million m³) for all eight nutrient regions, with the
+1992–1994 numeric-nutrient-criteria targets shown in parentheses in each column header. This table is
+the tabular companion to **Figure 9** (see *Overview*) and is built live from the repository data at
+render time.
+
+::: {.table-scroll}
+
+```{r}
+#| label: delivery-ratios
+library(dplyr)
+library(tidyr)
+library(knitr)
+library(here)
+
+seg_levels <- c(
+  "Old Tampa Bay (1.08 / 0.23)", "Hillsborough Bay (1.62 / 1.28)",
+  "Middle Tampa Bay (1.24 / 0.24)", "Lower Tampa Bay (0.97 / 0.14)",
+  "Remainder Lower Tampa Bay (1.59 / 0.52)", "Boca Ciega Bay South (0.97 / 0.06)",
+  "Terra Ceia Bay (1.1 / 0.14)", "Manatee River (1.8 / 0.37)"
+)
+
+totab <- read.csv(here("data", "loadratios1985-2025.csv"), check.names = FALSE) |>
+  mutate(
+    tnhy = round(tnhy, 2),
+    tphy = round(tphy, 2),
+    value = paste(tnhy, tphy, sep = " / "),
+    seg   = paste0(bay_segment, " (", tnhyref, " / ", tphyref, ")"),
+    seg   = factor(seg, levels = seg_levels)
+  ) |>
+  select(Year = year, seg, value) |>
+  pivot_wider(names_from = seg, values_from = value, names_sort = FALSE) |>
+  arrange(Year)
+
+totab <- totab[, c("Year", seg_levels)]
+
+# Return the table as a knitr object so Quarto renders it natively
+# (avoids printing escaped HTML markup on the page).
+kable(totab, align = c("l", rep("c", length(seg_levels))))
+```
+
+:::
+
+::: {.provenance}
+**Source:** [`R/docs.R`](https://github.com/tbep-tech/reasonable-assurance-analysis/blob/main/R/docs.R)
+→ section *2027 RA Update* (the repository renders this with `flextable` to
+`docs/loadratiotab1985-2025.docx`; here it is rebuilt inline from the same data) · **Data:**
+[`data/loadratios1985-2025.csv`](https://github.com/tbep-tech/reasonable-assurance-analysis/blob/main/data/loadratios1985-2025.csv)
+:::
+
+::: {.callout-note appearance="simple"}
+**Document-maintained sections.** The per-segment annual reasonable-assurance assessment steps
+(Figure 11; Tables 2–6), the 2027–2031 entity allocation tables (Tables 10–14), the Action Plan
+Database project tables (Tables 7–9), and the per-entity allocation **Appendices 1–5** are maintained
+in the RA Update document and the Consortium's entity-load workbooks. They draw on the same
+`load-estimates` outputs and the TBNMC Action Plan Database rather than on figure-generating code in
+this repository.
 :::

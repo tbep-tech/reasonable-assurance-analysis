@@ -57,7 +57,7 @@ Combined anticipated future TN offset from ongoing and planned projects (Tables 
 **106.78 tons/yr** at an estimated cost of **$137,428,003**.
 :::
 
-# Tables 10–14. Entity TN load allocations, 2027–2031 (Section 3.f)
+# Tables 10–14. Entity TN load allocations, 2027–2031 (Section 3.f){#tbl-alloc}
 
 SW = Surface water discharge allocation; RE = Reuse discharge allocation.
 

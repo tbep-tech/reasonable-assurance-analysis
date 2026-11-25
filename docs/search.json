@@ -284,7 +284,7 @@
     "href": "summary.html#a.-a-description-of-the-water-quality-monitoring-program-to-be-implemented",
     "title": "Monitoring, Corrective Actions & Summary",
     "section": "4.a. A description of the water quality monitoring program to be implemented",
-    "text": "4.a. A description of the water quality monitoring program to be implemented\n2027 RA Update: No change. Existing monitoring includes monthly ambient collections by the Environmental Protection Commission of Hillsborough County, Manatee County, and Pinellas County. Samples from over 100 stations baywide are collected and analyzed monthly. These regional programs are considered among the top in the nation. Additional research investments to understand Old Tampa Bay’s Pyrodinium bahamense bloom dynamics and internal nutrient fluxes have been made or are underway through Tampa Bay Environmental Restoration Fund (TBERF) grants.",
+    "text": "4.a. A description of the water quality monitoring program to be implemented\n2027 RA Update: No change. Existing monitoring includes monthly ambient collections by the Environmental Protection Commission of Hillsborough County, Manatee County, and Pinellas County. Samples from over 100 stations baywide are collected and analyzed monthly. These regional programs are considered among the top in the nation.1 Additional research investments to understand Old Tampa Bay’s Pyrodinium bahamense bloom dynamics and internal nutrient fluxes have been made or are underway through Tampa Bay Environmental Restoration Fund (TBERF) grants.",
     "crumbs": [
       "<span class='chapter-number'>4</span>  <span class='chapter-title'>Monitoring, Corrective Actions & Summary</span>"
     ]
@@ -314,7 +314,7 @@
     "href": "summary.html#d.-responsible-monitoring-and-reporting-entity",
     "title": "Monitoring, Corrective Actions & Summary",
     "section": "4.d. Responsible monitoring and reporting entity:",
-    "text": "4.d. Responsible monitoring and reporting entity:\n2027 RA Update: No change. The three entities identified in Section 4.a continue to collect water quality data. TBEP staff and the NMC’s technical support contractor assimilate and summarize the data annually to provide compliance assessment reports to FDEP. Reports for the 2022–2026 RA period are at https://tbep.org/our-work/boards-committees/nitrogen-management-consortium/.",
+    "text": "4.d. Responsible monitoring and reporting entity:\n2027 RA Update: No change. The three entities identified in Section 4.a continue to collect water quality data. TBEP staff and the NMC’s technical support contractor assimilate and summarize the data annually to provide compliance assessment reports to FDEP. Reports for the 2022–2026 RA period are at https://tbep.org/our-work/boards-committees/nitrogen-management-consortium/ (see NMC Publications sidebar menu).",
     "crumbs": [
       "<span class='chapter-number'>4</span>  <span class='chapter-title'>Monitoring, Corrective Actions & Summary</span>"
     ]
@@ -324,7 +324,7 @@
     "href": "summary.html#e.-frequency-and-reporting-format-for-reporting-monitoring-results",
     "title": "Monitoring, Corrective Actions & Summary",
     "section": "4.e. Frequency and reporting format for reporting monitoring results:",
-    "text": "4.e. Frequency and reporting format for reporting monitoring results:\n2027 RA Update: No change. As part of this update, the TBEP and TBNMC funded development of estimated TN, TP, TSS, and BOD loads for the watershed over the 2022–2026 RA period (https://tbep.org/tampa-bay-nitrogen-loads/). The Consortium also updated a Screening Level Tool for Estimating Annual Hydrologic Loadings to Tampa Bay to assess annual compliance of hydrologically-adjusted allocations; these adjustment factors are reported annually within the NMC compliance assessment reports submitted to FDEP and EPA.",
+    "text": "4.e. Frequency and reporting format for reporting monitoring results:\n2027 RA Update: No change. As part of this update, the TBEP and TBNMC funded the development of estimated TN, TP, TSS, and BOD loads for the watershed over the 2022–2026 RA period (https://tbep.org/tampa-bay-nitrogen-loads/). The Consortium also updated a Screening Level Tool for Estimating Annual Hydrologic Loadings to Tampa Bay to assess annual compliance of hydrologically-adjusted allocations. These adjustment factors are reported annually within the NMC compliance assessment reports submitted to FDEP and EPA.",
     "crumbs": [
       "<span class='chapter-number'>4</span>  <span class='chapter-title'>Monitoring, Corrective Actions & Summary</span>"
     ]
@@ -344,7 +344,7 @@
     "href": "summary.html#g.-methods-for-evaluating-progress-towards-goals",
     "title": "Monitoring, Corrective Actions & Summary",
     "section": "4.g. Methods for evaluating progress towards goals:",
-    "text": "4.g. Methods for evaluating progress towards goals:\n2027 RA Update: No change. Formal reporting of chlorophyll-a threshold compliance continues annually and integrates new seagrass acreage estimates or trends. If exceedances occur in two consecutive years in any bay segment, additional assessment steps are required. Additionally, the TBNMC re-assessed the assimilative capacity of the Old Tampa Bay segment over the 2022–2026 RA implementation period; revisions to bay-segment load targets, entity allocations, and numeric nutrient criteria were not recommended by the NMC, with FDEP concurring on Mar. 31, 2026 that additional projects and research be pursued in Old Tampa Bay to maintain its reasonable assurance determination.",
+    "text": "4.g. Methods for evaluating progress towards goals:\n2027 RA Update: No change. Formal reporting of chlorophyll-a threshold compliance continues annually and integrates new seagrass acreage estimates or trends. If exceedances occur in two consecutive years in any bay segment, additional assessment steps are required. Additionally, the TBNMC re-assessed the assimilative capacity of the Old Tampa Bay segment over the 2022–2026 RA implementation period.2,3,4 Revisions to bay-segment load targets, entity allocations, and numeric nutrient criteria were not recommended by the NMC (see Decision Memo 2027-03), with FDEP concurring on Mar. 31, 2026 that additional projects and research should be pursued in Old Tampa Bay to maintain its reasonable assurance determination.",
     "crumbs": [
       "<span class='chapter-number'>4</span>  <span class='chapter-title'>Monitoring, Corrective Actions & Summary</span>"
     ]
@@ -382,11 +382,11 @@
   {
     "objectID": "appendices.html",
     "href": "appendices.html",
-    "title": "Appendices 1–5: Entity Load Assessments",
+    "title": "Appendices 1–6: Entity Load & Bay Segment NNC Assessments",
     "section": "",
     "text": "Appendix 1. Old Tampa Bay allocation assessment, 2022–2025\nAppendices 1–5 present the per-entity, per-facility allocation assessment for each bay segment over the 2022–2025 Reasonable Assurance period. For each entity the table lists the facility (point-source discharge or MS4), its allocation (percent of remaining load, where applicable, and TMDL-equivalent tons/yr), and the mean annual effective load over 2022–2025, with an allocation status. Each table is rendered natively from a per-segment CSV in data/.\nSegment TMDL: 486 tons/yr. Allocation shown as percent of remaining load (MS4 / nonpoint) and TMDL-equivalent tons/yr; effective load is the mean annual hydrologically-normalized TN load, 2022–2025, in tons/yr.\nEntityFacilityAlloc. %Allocated (tons/yr)Effective load (tons/yr)StatusCheval WestMS40.18%0.70.4Within allocationCity of ClearwaterCity of Clearwater East AWWTF (end of pipe)9.36.3Within allocationCity of Clearwater Northeast AWWTF (end of pipe)16.65.6Within allocationCity of Clearwater East AWWTF (reuse)0.10.3Exceeds allocationCity of Clearwater Northeast AWWTF (reuse)1.11.2Exceeds allocationMS42.71%10.68.6Within allocationTotal37.622Within allocationCity of LargoCity of Largo (end of pipe)16.415.6Within allocationCity of Largo (reuse)2.61.2Within allocationMS41.40%5.54.5Within allocationTotal24.521.3Within allocationCity of OldsmarCity of Oldsmar WRF (end of pipe)2.70.3Within allocationCity of Oldsmar WRF (reuse)0.50.3Within allocationMS41.38%5.44.5Within allocationTotal8.65.2Within allocationCity of Pinellas ParkMS41.01%43.5Within allocationCity of Safety HarborMS41.27%54.2Within allocationCity of St. PetersburgSt Pete Facilities (reuse)4.75.2Exceeds allocationMS40.88%3.53.1Within allocationTotal8.28.3Exceeds allocationCity of TampaMS45.30%20.818Within allocationCity of Tarpon SpringsMS40.41%1.60.5Within allocationDuke EnergyDuke Energy-Bartow Plant31.8Within allocationHeritage HarborMS40.15%0.60.3Within allocationHillsborough CountyDale Mabry AWTP (end of pipe)7.40Within allocationNorthwest Regional WRF (end of pipe)2.910.9Exceeds allocationRiver Oaks AWWTP (end of pipe)13.40Within allocationDale Mabry AWTP (reuse)2.80Within allocationNorthwest Regional WRF (reuse)5.57.2Exceeds allocationRiver Oaks AWWTP (reuse)1.60Within allocationVan Dyke WWTP (reuse)0.81.3Exceeds allocationMS423.34%91.656.6Within allocationTotal12676Within allocationMacDill Air Force BaseMS40.09%0.40.3Within allocationOn Top of the WorldOn Top Of The World WWTP (reuse)0.51.1Exceeds allocationPalm BayMS40.01%00Within allocationPark PlaceMS40.10%0.40.5Exceeds allocationPasco CountyMS40.44%1.71.1Within allocationPinellas CountyBridgeway Acres (end of pipe)1.20Within allocationWilliam E. Dunn WRF (Pinellas NW) (reuse)2.30.5Within allocationMS414.66%57.623.5Within allocationTotal61.124Within allocationStonebriarMS40.05%0.20.3Exceeds allocationWestchaseMS40.36%1.41.1Within allocationWestchase EastMS40.43%1.71.4Within allocation",
     "crumbs": [
-      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Appendices 1–5: Entity Load Assessments</span>"
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Appendices 1–6: Entity Load & Bay Segment NNC Assessments</span>"
     ]
   },
   {
@@ -532,41 +532,41 @@
   {
     "objectID": "appendices.html#sec-app2",
     "href": "appendices.html#sec-app2",
-    "title": "Appendices 1–5: Entity Load Assessments",
+    "title": "Appendices 1–6: Entity Load & Bay Segment NNC Assessments",
     "section": "Appendix 2. Hillsborough Bay allocation assessment, 2022–2025",
     "text": "Appendix 2. Hillsborough Bay allocation assessment, 2022–2025\nSegment TMDL: 1,451 tons/yr. Allocation shown as percent of remaining load (MS4 / nonpoint) and TMDL-equivalent tons/yr; effective load is the mean annual hydrologically-normalized TN load, 2022–2025, in tons/yr.\n\n\nEntityFacilityAlloc. %Allocated (tons/yr)Effective load (tons/yr)StatusAlafia PreserveMS40.06%0.60.5Within allocationAlpha/Owens CorningAlpha/Owens Corning0.10%10Within allocationBloomingdaleMS40.00%00.2Exceeds allocationBrewster PhosphogypsumBrewster Phosphogypsum0.10%11Within allocationBusch GardensBusch Gardens0.00%16.5Exceeds allocationCity of LakelandCity of Lakeland (end of pipe)2014.6Within allocationCity of Lakeland (reuse)0.20Within allocationMS41.05%10.911Exceeds allocationTotal31.125.6Within allocationCity of MulberryCity of Mulberry (end of pipe)2.41.4Within allocationMS40.20%2.12.2Exceeds allocationTotal4.53.5Within allocationCity of Plant CityPlant City WRF (end of pipe)9.54.1Within allocationPlant City WRF (reuse)10.9Within allocationMS40.88%9.28.2Within allocationTotal19.713.2Within allocationCity of San AntonioMS40.03%0.30.1Within allocationCity of TampaHoward F. Curren (end of pipe)212.2247.3Exceeds allocationHoward F. Curren (reuse)14.8Exceeds allocationMS44.80%5062.4Exceeds allocationTotal263.2314.5Exceeds allocationCity of Temple TerraceMS40.20%2.10.9Within allocationCity of ZephyrhillsCity of Zephyrhills WWTF (reuse)30.9Within allocationMS40.16%1.60.8Within allocationTotal4.61.7Within allocationCoronetCoronet Industries0.45%4.74.1Within allocationCSXCSX - Rockport Newport0.72%62.8Within allocationCSX Winston Yard30Within allocationNewport (Material Losses)5.60.9Within allocationRockport (Material Losses)5.60.5Within allocationTotal20.34.2Within allocationDonaldson KnollMS40.01%0.10.1Within allocationEagle RidgeMS40.07%0.70.6Within allocationEstech AgricolaEstech Agricola0.25%2.61.6Within allocationExxon MobilExxon Mobil0.16%1.70Within allocationHillsborough CountyFalkenburg AWTP (end of pipe)15.217.3Exceeds allocationPebble Creek AWTP (end of pipe)0.30Within allocationSouth County Regional WWTP (end of pipe)1.81Within allocationValrico AWTP (end of pipe)5.61.1Within allocationFalkenburg AWTP (reuse)2.81.4Within allocationPebble Creek AWTP (reuse)0.10Within allocationValrico AWTP (reuse)516.4Exceeds allocationMS422.60%235.6193.8Within allocationTotal266.5231Within allocationKerryKerry I and F1.80.6Within allocationKinder MorganKinder Morgan Hartford Terminal2514.6Within allocationKinder Morgan Port Sutton2514.6Within allocationKinder Morgan Tampaplex2514.6Within allocationKinder Morgan Port Sutton (Material Losses)1.80.2Within allocationKinder Morgan Tampaplex (Material Losses)3.40.1Within allocationTotal30.214.8Within allocationLake St. CharlesMS40.04%0.40.5Exceeds allocationLive Oak IMS40.02%0.20.1Within allocationLive Oak IIMS40.01%0.10.1Within allocationLowry Park ZooLowry Park Zoo10.2Within allocationMacDill Air Force BaseMS40.07%0.71.1Exceeds allocationMagnolia ParkMS40.00%0.10.6Exceeds allocationMosaicHopewell12.03%124.1Exceeds allocationKingsford12.03%124.1Exceeds allocationMosaic - Bartow12.03%124.16.6Within allocationMosaic - Black Point12.03%124.11.4Within allocationMosaic - Bonnie12.03%124.18.5Within allocationMosaic - Ft. Lonesome12.03%124.16.8Within allocationMosaic - Green Bay12.03%124.110.2Within allocationMosaic - Hookers Prairie12.03%124.10Within allocationMosaic - Mulberry Phospho Stack12.03%124.12.6Within allocationMosaic - Mulberry Plant12.03%124.10.1Within allocationMosaic - New Wales Chemical Plant12.03%124.19.8Within allocationMosaic - Nichols Mine12.03%124.10.4Within allocationMosaic - Plant City12.03%124.111.1Within allocationMosaic - Port Sutton12.03%124.13.3Within allocationMosaic - Riverview12.03%124.12Within allocationMosaic - Riverview Stack Closure12.03%124.10Within allocationMosaic - South Pierce12.03%124.16.2Within allocationMosaic - Tampa Ammonia Terminal12.03%124.10Within allocationMosaic - Tampa Marine Terminal12.03%124.10.3Within allocationBig Bend (Material Losses)9.92.7Within allocationRiverview (Material Losses)9.92.7Within allocationTampa Marine (Material Losses)9.92.7Within allocationTotal13471.9Within allocationPalm RiverMS40.00%00.1Exceeds allocationPanther TraceMS40.03%0.30.5Exceeds allocationPanther Trace IIMS40.02%0.20.6Exceeds allocationPasco CountyPasco Reuse (reuse)5.82.9Within allocationMS43.69%38.418.2Within allocationTotal44.221.1Within allocationPolk CountyNW Regional WWTP (reuse)0.60.3Within allocationSouthwest Regional WWTF (reuse)1.10.7Within allocationMS46.47%67.565.2Within allocationTotal69.366.2Within allocationRivercrestMS40.03%0.30.6Exceeds allocationSpring LakeMS40.01%0.10.5Exceeds allocationSt. LeoMS40.00%00Within allocationStone CrestMS40.00%00.1Exceeds allocationStone Dairy CreekMS40.00%00.4Exceeds allocationStonelake RanchMS40.00%00.1Exceeds allocationTampa Bay WaterTampa Bay Water1.50Within allocationTECOTECO - Bayside (fka Gannon)0.07%0.80.2Within allocationTrademark NitrogenTrademark Nitrogen Corporation0.00%00.1Exceeds allocation",
     "crumbs": [
-      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Appendices 1–5: Entity Load Assessments</span>"
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Appendices 1–6: Entity Load & Bay Segment NNC Assessments</span>"
     ]
   },
   {
     "objectID": "appendices.html#sec-app3",
     "href": "appendices.html#sec-app3",
-    "title": "Appendices 1–5: Entity Load Assessments",
+    "title": "Appendices 1–6: Entity Load & Bay Segment NNC Assessments",
     "section": "Appendix 3. Middle Tampa Bay allocation assessment, 2022–2025",
     "text": "Appendix 3. Middle Tampa Bay allocation assessment, 2022–2025\nSegment TMDL: 799 tons/yr. Allocation shown as percent of remaining load (MS4 / nonpoint) and TMDL-equivalent tons/yr; effective load is the mean annual hydrologically-normalized TN load, 2022–2025, in tons/yr.\n\n\nEntityFacilityAlloc. %Allocated (tons/yr)Effective load (tons/yr)StatusCity of Pinellas ParkMS40.74%5.33.1Within allocationCity of St. PetersburgSt Pete Facilities (reuse)20.823.1Exceeds allocationMS46.49%46.520.2Within allocationTotal67.343.3Within allocationHarbor BayMS40.03%0.20.7Exceeds allocationHillsborough CountySouth County Regional WWTP (reuse)0.53.9Exceeds allocationMS49.91%70.9102.6Exceeds allocationTotal71.4106.4Exceeds allocationMacDill Air Force BaseMacDill AFB WWTP (reuse)0.70.2Within allocationMS40.97%72.9Within allocationTotal7.73.2Within allocationManatee CountyMS43.05%21.827Exceeds allocationMosaicMosaic - Four Corners4.09%29.314Within allocationPinellas CountyMS40.45%3.21.2Within allocationTECOTECO - Big Bend56.58.5Within allocation",
     "crumbs": [
-      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Appendices 1–5: Entity Load Assessments</span>"
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Appendices 1–6: Entity Load & Bay Segment NNC Assessments</span>"
     ]
   },
   {
     "objectID": "appendices.html#sec-app4",
     "href": "appendices.html#sec-app4",
-    "title": "Appendices 1–5: Entity Load Assessments",
+    "title": "Appendices 1–6: Entity Load & Bay Segment NNC Assessments",
     "section": "Appendix 4. Lower Tampa Bay allocation assessment, 2022–2025",
     "text": "Appendix 4. Lower Tampa Bay allocation assessment, 2022–2025\nSegment TMDL: 349 tons/yr. Allocation shown as percent of remaining load (MS4 / nonpoint) and TMDL-equivalent tons/yr; effective load is the mean annual hydrologically-normalized TN load, 2022–2025, in tons/yr.\n\n\nEntityFacilityAlloc. %Allocated (tons/yr)Effective load (tons/yr)StatusCity of St. PetersburgMS40.01%00Within allocationHillsborough CountyMS40.01%00Within allocationKinder MorganKinder Morgan Port Manatee (Material Losses)0.30Within allocationLexingtonMS40.04%0.10.1Within allocationManatee CountyManatee County North WRF (end of pipe)00Within allocationManatee County North WRF (reuse)3.95.2Exceeds allocationMS47.81%26.818.4Within allocationTotal30.723.7Within allocationPiney Point FacilityHRK Piney Point0.91.5Exceeds allocation",
     "crumbs": [
-      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Appendices 1–5: Entity Load Assessments</span>"
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Appendices 1–6: Entity Load & Bay Segment NNC Assessments</span>"
     ]
   },
   {
     "objectID": "appendices.html#sec-app5",
     "href": "appendices.html#sec-app5",
-    "title": "Appendices 1–5: Entity Load Assessments",
+    "title": "Appendices 1–6: Entity Load & Bay Segment NNC Assessments",
     "section": "Appendix 5. Remainder of Lower Tampa Bay allocation assessment, 2022–2025",
     "text": "Appendix 5. Remainder of Lower Tampa Bay allocation assessment, 2022–2025\nSegment TMDL: 629 tons/yr. Allocation shown as percent of remaining load (MS4 / nonpoint) and TMDL-equivalent tons/yr; effective load is the mean annual hydrologically-normalized TN load, 2022–2025, in tons/yr.\n\n\nEntityFacilityAlloc. %Allocated (tons/yr)Effective load (tons/yr)StatusCity of BradentonCity of Bradenton WRF (end of pipe)18.623.2Exceeds allocationCity of Bradenton WRF (reuse)0.69.9Exceeds allocationMS41.82%10.87.1Within allocationTotal30.140.3Exceeds allocationCity of GulfportMS40.37%2.20.8Within allocationCity of PalmettoCity of Palmetto WWTF (end of pipe)2.20.6Within allocationCity of Palmetto WWTF (reuse)10Within allocationMS40.77%4.63.3Within allocationTotal7.73.9Within allocationCity of St. PetersburgSt Pete Facilities (reuse)1.61.8Exceeds allocationMS41.27%7.53.7Within allocationTotal9.15.5Within allocationCity of St. Petersburg BeachMS40.21%1.20.6Within allocationGreyhawk LandingMS40.14%0.80.7Within allocationHarbourage at Braden RiverMS40.00%00.1Exceeds allocationHeritage HarbourMS40.14%0.80.9Exceeds allocationHeritage Harbour MarketplaceMS40.02%0.10.1Within allocationLakewood RanchMS41.47%8.76.3Within allocationLexingtonMS40.02%0.10.1Within allocationManatee CountyManatee County Southeast WRF (reuse)2.716.1Exceeds allocationMS421.95%130.2109Within allocationTotal132.9125.1Within allocationPinellas CountyMS40.18%1.10.7Within allocationSarasota CountyMS41.38%8.24.8Within allocationTaraMS40.18%1.10.7Within allocationUniversity PlaceMS40.11%0.60.4Within allocationWaterlefeMS40.10%0.60.4Within allocation\n\n\n\n\n\n\n\n\nAn “exceeds allocation” status for an individual facility does not by itself indicate a segment-level reasonable-assurance failure. Under the NMC framework (Tables 2–6, Section 2.d), entity/facility exceedances are evaluated (NMC Actions 4–5) only when a segment’s chlorophyll-a threshold is not met, and entity-generated reductions are retained as indefinite credits (2009 RA Addendum §IX.D). All segments met their chlorophyll-a thresholds over 2022–2026.\n\n\n\n\nAppendices 1–5: TBEP load-reporting “Assessment” outputs (drafttables.qmd → show_aaassess(), data/aa2225.RData), 2022–2025. Allocation percentages and TMDL-equivalent loads correspond to Tables 10–14 (Action Plan & Allocation Tables chapter).",
     "crumbs": [
-      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Appendices 1–5: Entity Load Assessments</span>"
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Appendices 1–6: Entity Load & Bay Segment NNC Assessments</span>"
     ]
   },
   {
@@ -577,6 +577,36 @@
     "text": "2.a. Water quality-based targets or aquatic ecological goals:\n2027 RA Update: No change. The baywide seagrass restoration goal of 40,000 acres was adopted in 2020. Maintaining adequate water quality at adopted FDEP chlorophyll-a threshold levels in each major bay segment on an annual-average basis is the primary metric for assessing progress toward the seagrass restoration goal (see Figure 2). A secondary goal — maintaining hydrologically-normalized total nitrogen loads to each major bay segment — was adopted with the 2009 RA Addendum and later codified as the numeric nutrient criteria for the Tampa Bay estuarine nutrient regions (62-302.532(1), F.A.C.). A compliance assessment framework was established and has been utilized for all subsequent reasonable assurance updates (see 2009 RA Addendum, Section VIII).",
     "crumbs": [
       "<span class='chapter-number'>2</span>  <span class='chapter-title'>Reaonable Assurance Plan Update Overview</span>"
+    ]
+  },
+  {
+    "objectID": "summary.html#footnotes",
+    "href": "summary.html#footnotes",
+    "title": "Monitoring, Corrective Actions & Summary",
+    "section": "",
+    "text": "Schiff, K., P. Trowbridge, E. Sherwood, P. Tango, R. Batiuk (2015) Regional monitoring programs in the US: Synthesis of four case studies from Pacific, Atlantic, and Gulf Coasts. Regional Studies in Marine Science 4, A1–A7. https://doi.org/10.1016/j.rsma.2015.11.007.↩︎\nStantec Consulting Services, Inc. (2024) Old Tampa Bay (OTB) Assimilative Capacity Assessment Project: Task 1 Evaluating Existing Management Paradigm and Assessing Alternatives, Technical report #09-24, Tampa Bay Estuary Program, St. Petersburg, Florida. https://drive.google.com/file/d/1IfVUTLE20wzVgzULuyeRGWapEFT3DhQ0/view?usp=drive_link.↩︎\nStantec Consulting Services, Inc. (2025) Old Tampa Bay Assimilative Capacity Study: Task 2 Evaluation of Eutrophication Indicator Targets, Thresholds, and Numeric Nutrient Criteria and Proposed Adjustments, Technical report #05-25, Tampa Bay Estuary Program, St. Petersburg, Florida. https://drive.google.com/file/d/12xYfSs-4bxhLa1ZVQbmhQSv5Jo4Jf-oY/view?usp=sharing.↩︎\nStantec Consulting Services, Inc. (2025) Old Tampa Bay Assimilative Capacity Study: Task 3 Management Intervention Assessment and Recommendations, Technical report #17-25, Tampa Bay Estuary Program, St. Petersburg, Florida. https://drive.google.com/file/d/1uVeMIpSylz1Mull6WMwVDc7KVInzosqy/view?usp=sharing.↩︎",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Monitoring, Corrective Actions & Summary</span>"
+    ]
+  },
+  {
+    "objectID": "summary.html#sec-4a",
+    "href": "summary.html#sec-4a",
+    "title": "Monitoring, Corrective Actions & Summary",
+    "section": "4.a. A description of the water quality monitoring program to be implemented",
+    "text": "4.a. A description of the water quality monitoring program to be implemented\n2027 RA Update: No change. Existing monitoring includes monthly ambient collections by the Environmental Protection Commission of Hillsborough County, Manatee County, and Pinellas County. Samples from over 100 stations baywide are collected and analyzed monthly. These regional programs are considered among the top in the nation.1 Additional research investments to understand Old Tampa Bay’s Pyrodinium bahamense bloom dynamics and internal nutrient fluxes have been made or are underway through TBEP and partner funded projects and/or though Tampa Bay Environmental Restoration Fund (TBERF) grants.",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Monitoring, Corrective Actions & Summary</span>"
+    ]
+  },
+  {
+    "objectID": "summary.html#4a",
+    "href": "summary.html#4a",
+    "title": "Monitoring, Corrective Actions & Summary",
+    "section": "4.a. Description of the water quality monitoring program to be implemented",
+    "text": "4.a. Description of the water quality monitoring program to be implemented\n2027 RA Update: No change. Existing monitoring includes monthly ambient collections by the Environmental Protection Commission of Hillsborough County, Manatee County, and Pinellas County. Samples from over 100 stations baywide are collected and analyzed monthly. These regional programs are considered among the top in the nation.1 Additional research investments to understand Old Tampa Bay’s Pyrodinium bahamense bloom dynamics and internal nutrient fluxes have been made or are underway through TBEP and partner funded projects and/or though Tampa Bay Environmental Restoration Fund (TBERF) grants.",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Monitoring, Corrective Actions & Summary</span>"
     ]
   }
 ]
