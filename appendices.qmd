@@ -77,7 +77,7 @@ outputs (`drafttables.qmd` → `show_aaassess()`, `data/aa2225.RData`), 2022–2
 and TMDL-equivalent loads correspond to **Tables 10–14** (*Action Plan & Allocation Tables* chapter).
 :::
 
-# Appendix 6. TN and TP delivery ratios, 1985–2025
+## Appendix 6. TN and TP delivery ratios, 1985–2025
 
 Annual TN / TP delivery ratios (tons per million m³) for all eight nutrient regions, with the
 1992–1994 numeric-nutrient-criteria targets shown in parentheses in each column header. This table is
