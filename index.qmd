@@ -4,6 +4,14 @@ title: "2027 Tampa Bay Reasonable Assurance Plan Update"
 
 ![](www/header.png)
 
+::: {.headline}
+**Headline finding for 2022–2026:** FDEP-adopted chlorophyll-*a* thresholds were met in **all** major
+bay segments over the 2022–2026 RA period (see *Overview*, Figure 2). This represents a marked
+improvement in overall water quality during this RA period, **particularly in Old Tampa Bay (OTB)**, which did not meet its
+chlorophyll-*a* numeric nutrient criteria in four of the five years of the preceding (2017–2021)
+period.
+:::
+
 ## Tampa Bay Nutrient Management Strategy {.unnumbered}
 The Tampa Bay Estuary Program (TBEP) and the Tampa Bay Nitrogen Management Consortium (NMC) submitted the “Tampa Bay Watershed Management Summary” to the Florida Department of Environmental Protection (FDEP) on July 29, 2002. The purpose of that document (called the “[2002 Tampa Bay Reasonable Assurance Document](https://tbep.org/reasonable-assurance-plans-updates-2002/)”) was to summarize the nitrogen management plan developed by the TBEP for Tampa Bay and to outline the underlying scientific basis for the plan. The document was formatted to facilitate its use in demonstrating reasonable assurance that designated uses of waterbody segments within the Tampa Bay basin, which were determined potentially impaired for nutrients pursuant to Chapter 62-303, F.A.C., will be maintained or restored. The document also provided a basis for establishment of alternative site-specific thresholds that more accurately reflect conditions beyond which an imbalance of flora and fauna may occur.
 
@@ -16,37 +24,27 @@ The format of this 2027 Reasonable Assurance (RA) Update follows that provided i
 ## Additional Information {.unnumbered}
 This book is the web companion to the **[2027 Reasonable Assurance (RA) Update](https://docs.google.com/document/d/1QXoC0cP8zpiCuWNnEOQ8_kvxuxftGfHDny0RZ9FPPaM/edit?usp=sharing)** prepared by the Tampa
 Bay Estuary Program (TBEP) and the Tampa Bay Nitrogen Management Consortium (NMC) for the Florida
-Department of Environmental Protection (FDEP). It presents the narrative, figures, and tables of the
-RA Update for the **2022–2026 reporting period**, with each figure and table linked back to the
-analysis code that produces it in this repository,
+Department of Environmental Protection (FDEP) and US Environmental Protection Agency (USEPA). It presents the narrative, figures, and tables of the RA Update for the **2022–2026 reporting period**, with each figure and table linked back to the
+analysis code that produces it in this repository (where applicable),
 [`tbep-tech/reasonable-assurance-analysis`](https://github.com/tbep-tech/reasonable-assurance-analysis).
-
-::: {.callout-note}
-## Reproducibility
-
-Figures and tables are generated programmatically, not hand-edited. Run `R/dat_proc.R` (data
-assembly) → `R/figs.R` (figures) and `R/docs.R` (tables). Loading inputs come from the companion
-[`tbep-tech/load-estimates`](https://github.com/tbep-tech/load-estimates) pipeline; water-quality
-thresholds and segment averaging use the [`tbeptools`](https://tbep-tech.github.io/tbeptools/) R
-package. All historic and contemporary loading information is openly accessible at
-<https://tbep.org/tampa-bay-nitrogen-loads>.
-:::
 
 Prior Reasonable Assurance Updates were submitted in 2002, 2007 (with a 2009 Addendum), 2012, 2017,
 and 2022. As of the 2022 RA Update, FDEP concluded the document "satisfies the requirements for
 continued approval of the RAP," and concurred that the proposed NMC corrective actions were
 "reasonable and sufficient to address the issues in Old Tampa Bay," requesting periodic updates on
-corrective-action implementation over the 2022–2026 period.
-
-::: {.headline}
-**Headline finding for 2022–2026:** FDEP-adopted chlorophyll-*a* thresholds were met in **all** major
-bay segments over the 2022–2026 RA period (see *Overview*, Figure 2). This represents a marked
-improvement in overall water quality, **particularly in Old Tampa Bay (OTB)**, which did not meet its
-chlorophyll-*a* numeric nutrient criteria in four of the five years of the preceding (2017–2021)
-period.
-:::
+corrective-action implementation over the 2022–2026 period.This document aims to satisfy this request.
 
 Use the sidebar to navigate: the **Overview** chapter covers the waterbody, water-quality goals,
 nitrogen loading, and seagrass habitat; the **Summary** chapter covers corrective actions, progress
 since 2022, and the delivery-ratio table; and **Provenance** maps every deliverable to its source
 code.
+
+::: {.callout-note}
+## Note on Reproducibility
+
+Where applicable, figures and tables are generated programmatically through TBEP repositories, not hand-edited. Run `R/dat_proc.R` (data assembly) → `R/figs.R` (figures) and `R/docs.R` (tables). Loading inputs come from the companion
+[`tbep-tech/load-estimates`](https://github.com/tbep-tech/load-estimates) pipeline; water-quality
+thresholds and segment averaging use the [`tbeptools`](https://tbep-tech.github.io/tbeptools/) R
+package. Addiitonally, all historic and contemporary loading information is openly accessible at
+<https://tbep.org/tampa-bay-nitrogen-loads>.
+:::

@@ -1,7 +1,6 @@
 ---
-title: "Appendices 1–5 · Entity Load Assessments"
+title: "Appendices 1–5: Entity Load Assessments"
 ---
-
 Appendices 1–5 present the per-entity, per-facility allocation assessment for each bay segment over
 the 2022–2025 Reasonable Assurance period. For each entity the table lists the facility (point-source
 discharge or MS4), its allocation (percent of remaining load, where applicable, and TMDL-equivalent
@@ -29,7 +28,7 @@ render_appendix <- function(n, segment, slug, tmdl) {
   dat <- read.csv(here("data", paste0(slug, ".csv")), check.names = FALSE)
   for (col in names(dat)) dat[[col]][is.na(dat[[col]])] <- ""
 
-  cat(sprintf("\n\n## Appendix %d. %s allocation assessment, 2022–2025\n\n", n, segment))
+  cat(sprintf("\n\n## Appendix %d. %s allocation assessment, 2022–2025 {#sec-app%d}\n\n", n, segment, n))
   cat(sprintf(paste0("Segment TMDL: **%s tons/yr**. Allocation shown as percent of remaining load ",
                      "(MS4 / nonpoint) and TMDL-equivalent tons/yr; effective load is the mean annual ",
                      "hydrologically-normalized TN load, 2022–2025, in tons/yr.\n\n"),

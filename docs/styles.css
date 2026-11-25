@@ -11,7 +11,7 @@
 
 /* ---- document body ---- */
 body {
-  font-family: 'Roboto', Helvetica, Arial, sans-serif;
+  font-family: 'Roboto';
   font-weight: 400;
   font-size: 16px;
   color: #636363;
@@ -21,10 +21,10 @@ body {
 h1, h2, h3, h4, h5, h6 {
   font-weight: 500;
   color: #005293;
-  font-family: 'Rubik', Helvetica, Arial, Lucida, sans-serif;
+  font-family: 'Rubik';
 }
-h1 { font-size: 40px; }
-h2 { font-size: 32px; border-bottom: 2px solid #00806E; padding-bottom: .25rem; }
+h1 { font-size: 36px; }
+h2 { font-size: 28px; border-bottom: 2px solid #00806E; padding-bottom: .25rem; }
 h3 { font-size: 24px; }
 h4 { font-size: 18px; }
 h5 { font-size: 16px; }
@@ -34,14 +34,14 @@ h6 { font-size: 14px; }
 .navbar {
   background-color: #00806E;
   border-color: black;
-  font-family: 'Roboto', Helvetica, Arial, sans-serif;
+  font-family: 'Roboto';
   font-weight: 300;
 }
 .navbar .navbar-title,
 .navbar-brand {
-  font-family: 'Roboto Condensed', 'Roboto', sans-serif;
+  font-family: 'Roboto Condensed', 'Roboto';
   font-weight: 700;
-  color: #ffffff;
+  color: #ff0000;
 }
 .navbar .nav-link,
 .navbar .navbar-nav .nav-link {
@@ -58,7 +58,7 @@ h6 { font-size: 14px; }
 /* ---- links (TBEP/WordPress orange) ---- */
 a {
   color: #db5b25;
-  font-family: 'Roboto', Helvetica, Arial, Lucida, sans-serif;
+  font-family: 'Roboto';
   font-weight: 500;
   text-decoration: none;
 }
@@ -71,7 +71,7 @@ a:hover   { color: #f57d05; }
 
 /* ---- left sidebar / TOC ---- */
 .sidebar, #quarto-margin-sidebar, #TOC, nav[role="doc-toc"] {
-  font-family: 'Roboto', Helvetica, Arial, sans-serif;
+  font-family: 'Roboto';
   font-weight: 300;
 }
 nav[role="doc-toc"] a { color: #958984; }
@@ -81,7 +81,7 @@ nav[role="doc-toc"] .active { color: #00806E !important; }
 /* ---- figure captions & secondary text ---- */
 .caption, figcaption, .figure-caption,
 .quarto-figure figcaption {
-  font-family: 'Roboto', Helvetica, Arial, sans-serif;
+  font-family: 'Roboto';
   font-weight: 300;
   font-style: italic;
   color: #958984;
@@ -138,7 +138,7 @@ img[src$="header.png"] {
   border-radius: 0;
   margin-bottom: 1.2rem;
 }
-
-p{
+p {
   text-align: justify !important;
+  hyphens: auto;
 }
