@@ -136,7 +136,7 @@ sources for each 5-year Tampa Bay RA period; the final column is the current 202
 
 ![Figure 9. TN (a) and TP (b) delivery ratios by bay segment, 1985–2025, with 1992–1994 numeric-nutrient-criteria reference lines.](figs/fig09_loadratios.png){fig-alt="Small-multiple time series of TN and TP delivery ratios by bay segment"}
 
-![Figure 10. Trend in total nitrogen vs. hydrology load to Tampa Bay relative to population increases in the Tampa Bay metropolitan area.](figs/fig10_tn_vs_pop.png){fig-alt="Population bars with TN-to-hydrology ratio line, 1985-2025"}
+![Figure 10. Trend in total nitrogen vs. hydrology load to Tampa Bay relative to population increases in the Tampa Bay metropolitan area.](figs/fig10_tn_vs_pop.svg){fig-alt="Population bars with TN-to-hydrology ratio line, 1985-2025"}
 
 ::: {.provenance}
 **Table 1, Figures 7 & 10:** TN loading estimates from
